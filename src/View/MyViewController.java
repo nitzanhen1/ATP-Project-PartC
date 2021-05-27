@@ -6,12 +6,16 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 //<?import View.*?>
@@ -25,6 +29,8 @@ public class MyViewController implements Initializable, IView {
     public static Stage stage;
     public Button buttonHint;
     public RadioButton buttonSolveMaze;
+    public MenuItem muteUnmuteButton;
+    public Button instruction;
     private int [][] maze;
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
@@ -47,6 +53,7 @@ public class MyViewController implements Initializable, IView {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lbl_PlayerRow.textProperty().bind(updatePlayerRow);
         lbl_PlayerCol.textProperty().bind(updatePlayerCol);
+
     }
 
     public void generateMaze(ActionEvent actionEvent) {
@@ -55,6 +62,17 @@ public class MyViewController implements Initializable, IView {
         int rows =Integer.valueOf(textField_mazeRows.getText());
         int cols =Integer.valueOf(textField_mazeColumns.getText());
         maze = generator.generateRandomMaze(rows,cols);
+
+        stage.widthProperty().addListener(event -> {
+            mazeDisplayer.widthProperty().setValue(stage.widthProperty().getValue()/1.5);
+            mazeDisplayer.drawMaze(maze);
+            //mazeDisplayer.drawPlayerAndGoal();
+        });
+        stage.heightProperty().addListener(event -> {
+            mazeDisplayer.heightProperty().setValue(stage.heightProperty().getValue()/(1.5));
+            mazeDisplayer.drawMaze(maze);
+            //mazeDisplayer.drawPlayerAndGoal();
+        });
 
         mazeDisplayer.drawMaze(maze);
         buttonSolveMaze.setDisable(false);
@@ -91,17 +109,6 @@ public class MyViewController implements Initializable, IView {
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
-        stage.widthProperty().addListener(event -> {
-            mazeDisplayer.widthProperty().setValue(stage.widthProperty().getValue()/1.5);
-            mazeDisplayer.drawMaze(maze);
-            //mazeDisplayer.drawPlayerAndGoal();
-        });
-        stage.heightProperty().addListener(event -> {
-            mazeDisplayer.heightProperty().setValue(stage.heightProperty().getValue()/(1.5));
-            mazeDisplayer.drawMaze(maze);
-            //mazeDisplayer.drawPlayerAndGoal();
-        });
-
     }
 
     public void getHint(ActionEvent actionEvent) {
@@ -110,6 +117,76 @@ public class MyViewController implements Initializable, IView {
 
     public void muteUnmute(ActionEvent actionEvent) {
 
+    }
+
+    public void saveMaze(ActionEvent actionEvent) {
+    }
+
+    public void loadMaze(ActionEvent actionEvent) {
+    }
+
+    public void Properties(ActionEvent actionEvent) {
+    }
+
+    public void MuteUnmute(ActionEvent actionEvent) {
+    }
+
+    public void exitButton(ActionEvent actionEvent) {
+    }
+
+    public void chooseCharacter(ActionEvent actionEvent) {
+    }
+
+    public void about(ActionEvent actionEvent) {
+    }
+
+    public void help(ActionEvent actionEvent) {
+        try {
+            //Stage newStage = new Stage();
+            //newStage.setTitle("Help");
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            Parent root = fxmlLoader.load(getClass().getResource("Help.fxml").openStream());
+            Scene scene = new Scene(root, 900, 900);
+            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            //newStage.setScene(scene);
+            //newStage.show();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void exit(ActionEvent actionEvent) {
+    }
+
+    public void properties(ActionEvent actionEvent) {
+    }
+
+    public void play(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            Parent root = fxmlLoader.load(getClass().getResource("MyView.fxml"));
+            Scene scene = new Scene(root, 800, 600);
+            scene.getStylesheets().add(getClass().getResource("MyStyle.css").toExternalForm());
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void backToMain(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            Parent root = fxmlLoader.load(getClass().getResource("MainView.fxml"));
+            Scene scene = new Scene(root, 800, 600);
+            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
