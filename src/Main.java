@@ -1,9 +1,11 @@
-import View.MyViewController;
+import View.MainViewController;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Main extends Application {
 
@@ -16,9 +18,14 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("View/MainStyle.css").toExternalForm());
         primaryStage.setScene(scene);
 
-        MyViewController myViewController =fxmlLoader.getController();
-        myViewController.setStage(primaryStage);
+        MainViewController mainViewController =fxmlLoader.getController();
+        mainViewController.setStage(primaryStage);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+                mainViewController.exit();
+            }
+        });
     }
 
 

@@ -3,10 +3,16 @@ package View;
 import javafx.event.ActionEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public interface IView {
-    void generateMaze(ActionEvent actionEvent);
-    void keyPressed(KeyEvent keyEvent);
-    void solveMaze(ActionEvent actionEvent);
-    public void mouseClicked(MouseEvent mouseEvent);
+    void setStage(Stage Stage);
+    void newGame(ActionEvent actionEvent);
+    void saveGame(ActionEvent actionEvent);
+    void loadGame(ActionEvent actionEvent);
+    void properties(ActionEvent actionEvent);
+    void help(MouseEvent mouseEvent);
+    void about(MouseEvent mouseEvent);
+    void exit();
+    void muteUnmute(ActionEvent actionEvent);
 }

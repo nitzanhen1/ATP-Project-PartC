@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
+   <children>
+      <ImageView fx:id="rachel" fitHeight="127.0" fitWidth="179.0" layoutX="224.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="monica" fitHeight="127.0" fitWidth="179.0" layoutX="383.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="pheobe" fitHeight="127.0" fitWidth="179.0" layoutX="383.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="chandler" fitHeight="127.0" fitWidth="179.0" layoutX="224.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="joey" fitHeight="127.0" fitWidth="179.0" layoutX="65.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="ross" fitHeight="127.0" fitWidth="179.0" layoutX="65.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true"/>
+   </children>
+</AnchorPane>

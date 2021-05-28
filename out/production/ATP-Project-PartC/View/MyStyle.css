@@ -13,6 +13,12 @@ Label{
     -fx-font-weight: bold italic;
     -fx-font-size: 16;
 }
+#menuText1, #menuText2, #menuText3{
+    -fx-text-fill: black;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: normal;
+    -fx-font-size: 12;
+}
 
 Button {
     -fx-text-fill: white;

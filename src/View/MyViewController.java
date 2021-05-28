@@ -19,29 +19,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 //<?import View.*?>
-public class MyViewController implements Initializable, IView {
+public class MyViewController extends AView {
     public MazeGenerator generator;
     public TextField textField_mazeRows;
     public TextField textField_mazeColumns;
     public MazeDisplayer mazeDisplayer;
     public Label lbl_PlayerRow;
     public Label lbl_PlayerCol;
-    public static Stage stage;
     public Button buttonHint;
     public RadioButton buttonSolveMaze;
-    public MenuItem muteUnmuteButton;
-    public Button instruction;
+    public MenuItem buttonSave;
     private int [][] maze;
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
 
-    public String getUpdatePlayerRow() {
-        return updatePlayerRow.get();
-    }
-    public String getUpdatePlayerCol() {
-        return updatePlayerCol.get();
-    }
     public void setUpdatePlayerRow(int row) {
         this.updatePlayerRow.set("" + row);
     }
@@ -53,7 +45,6 @@ public class MyViewController implements Initializable, IView {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lbl_PlayerRow.textProperty().bind(updatePlayerRow);
         lbl_PlayerCol.textProperty().bind(updatePlayerCol);
-
     }
 
     public void generateMaze(ActionEvent actionEvent) {
@@ -77,6 +68,7 @@ public class MyViewController implements Initializable, IView {
         mazeDisplayer.drawMaze(maze);
         buttonSolveMaze.setDisable(false);
         buttonHint.setDisable(false);
+        buttonSave.setDisable(false);
     }
 
     public void solveMaze(ActionEvent actionEvent) {
@@ -86,6 +78,7 @@ public class MyViewController implements Initializable, IView {
     }
 
     public void keyPressed(KeyEvent keyEvent){
+        //need to pass which key to the modelView
         int row = mazeDisplayer.getPlayerRow();
         int col = mazeDisplayer.getPlayerCol();
         //need to check bounderies but not here!! where is next week lab
@@ -106,74 +99,8 @@ public class MyViewController implements Initializable, IView {
         mazeDisplayer.requestFocus();
     }
 
-
-    public void setStage(Stage Stage) {
-        this.stage = Stage;
-    }
-
     public void getHint(ActionEvent actionEvent) {
 
-    }
-
-    public void muteUnmute(ActionEvent actionEvent) {
-
-    }
-
-    public void saveMaze(ActionEvent actionEvent) {
-    }
-
-    public void loadMaze(ActionEvent actionEvent) {
-    }
-
-    public void Properties(ActionEvent actionEvent) {
-    }
-
-    public void MuteUnmute(ActionEvent actionEvent) {
-    }
-
-    public void exitButton(ActionEvent actionEvent) {
-    }
-
-    public void chooseCharacter(ActionEvent actionEvent) {
-    }
-
-    public void about(ActionEvent actionEvent) {
-    }
-
-    public void help(ActionEvent actionEvent) {
-        try {
-            //Stage newStage = new Stage();
-            //newStage.setTitle("Help");
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("Help.fxml").openStream());
-            Scene scene = new Scene(root, 900, 900);
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
-            //newStage.setScene(scene);
-            //newStage.show();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void exit(ActionEvent actionEvent) {
-    }
-
-    public void properties(ActionEvent actionEvent) {
-    }
-
-    public void play(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("MyView.fxml"));
-            Scene scene = new Scene(root, 800, 600);
-            scene.getStylesheets().add(getClass().getResource("MyStyle.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public void backToMain(ActionEvent actionEvent) {
