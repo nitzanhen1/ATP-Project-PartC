@@ -25,21 +25,21 @@ ImageView{
     -fx-background-color: green;
 }
 
-#pheobe{
-    -fx-image: url("//resources/images/charMenu/rachel3.gif");
+#phoebe{
+    -fx-image: url("//resources/images/charMenu/p7.gif");
     -fx-background-color: green;
 }
 #chandler{
-    -fx-image: url("//resources/images/charMenu/chandler2.gif");
+    -fx-image: url("//resources/images/charMenu/c4.gif");
     -fx-background-color: green;
 }
 
 #joey{
-    -fx-image: url("//resources/images/charMenu/joey5.gif");
+    -fx-image: url("//resources/images/charMenu/j5.gif");
     -fx-background-color: green;
 }
 #ross{
-    -fx-image: url("//resources/images/charMenu/ross1.gif");
+    -fx-image: url("//resources/images/charMenu/ross4.gif");
     -fx-background-color: green;
 }
 TextArea{
