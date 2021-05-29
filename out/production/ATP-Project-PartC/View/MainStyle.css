@@ -10,7 +10,10 @@ BorderPane{
     -fx-background-image: url("//resources/images/milk.jpeg");
     -fx-background-size: stretch;
 }
-
+#chooseBackground{
+    -fx-background-image: url("//resources/images/backgroundChoose.jpeg");
+    -fx-background-size: stretch;
+}
 
 ImageView{
     -fx-image: url("//resources/images/f2.png");
@@ -26,16 +29,16 @@ ImageView{
 }
 
 #phoebe{
-    -fx-image: url("//resources/images/charMenu/p7.gif");
+    -fx-image: url("//resources/images/charMenu/p5.gif");
     -fx-background-color: green;
 }
 #chandler{
-    -fx-image: url("//resources/images/charMenu/c4.gif");
+    -fx-image: url("//resources/images/charMenu/chandler2.gif");
     -fx-background-color: green;
 }
 
 #joey{
-    -fx-image: url("//resources/images/charMenu/j5.gif");
+    -fx-image: url("//resources/images/charMenu/joey5.gif");
     -fx-background-color: green;
 }
 #ross{

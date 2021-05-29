@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="572.0" prefWidth="743.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
+<AnchorPane fx:id="chooseBackground" prefHeight="572.0" prefWidth="743.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
    <children>
       <GridPane layoutX="140.0" layoutY="146.0" prefHeight="333.0" prefWidth="540.0">
         <columnConstraints>
@@ -19,12 +19,12 @@
           <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="ross" fitHeight="173.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="rachel" fitHeight="175.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="phoebe" fitHeight="178.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fx:id="monica" fitHeight="177.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="chandler" fitHeight="172.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="joey" fitHeight="177.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="monica" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ross" fitHeight="175.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="joey" fitHeight="175.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="rachel" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="phoebe" fitHeight="172.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="chandler" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
