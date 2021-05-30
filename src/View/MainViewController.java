@@ -24,10 +24,12 @@ public class MainViewController extends AView{
     }
     public void characterButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("CharactersView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CharactersView.fxml"));
+            Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, 800, 600);
             scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            MainViewController mainViewController = fxmlLoader.getController();
+            mainViewController.setMyViewModel(myViewModel);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

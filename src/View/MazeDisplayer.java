@@ -19,6 +19,11 @@ public class MazeDisplayer extends Canvas {
     private int PlayerCol=0;
     private int GoalRow=0;
     private int GoalCol=0;
+    private int rows;
+    private int cols;
+    private double cellHeight;
+    private double cellWidth;
+    private GraphicsContext graphicsContext;
 
     public int getPlayerRow() {
         return PlayerRow;
@@ -79,20 +84,24 @@ public class MazeDisplayer extends Canvas {
 
     private void draw() {
         if(maze != null){
-            double canvasHeight = getHeight();
-            double canvasWidth = getWidth();
-            int rows = maze.length;
-            int cols = maze[0].length;
-            double cellHeight = canvasHeight/rows;
-            double cellWidth = canvasWidth/cols;
-            GraphicsContext graphicsContext =  getGraphicsContext2D();
-            //clear the canvas
-            graphicsContext.clearRect(0,0,canvasWidth,canvasHeight);
+            setCanvas();
             //draw each component of mazeDisplay
             drawMazeWalls(graphicsContext,rows,cols, cellHeight,cellWidth);
             drawGoal(graphicsContext,cellHeight,cellWidth);
             drawPlayer(graphicsContext,cellHeight,cellWidth);
         }
+    }
+
+    private void setCanvas(){
+        double canvasHeight = getHeight();
+        double canvasWidth = getWidth();
+        rows = maze.length;
+        cols = maze[0].length;
+        cellHeight = canvasHeight/rows;
+        cellWidth = canvasWidth/cols;
+        graphicsContext =  getGraphicsContext2D();
+        //clear the canvas
+        graphicsContext.clearRect(0,0,canvasWidth,canvasHeight);
     }
 
     private void drawMazeWalls(GraphicsContext graphicsContext, int rows, int cols, double cellHeight, double cellWidth) {
@@ -151,5 +160,25 @@ public class MazeDisplayer extends Canvas {
             graphicsContext.fillRect(x,y,cellWidth,cellHeight);
         else
             graphicsContext.drawImage(goalImage,x,y,cellWidth,cellHeight);
+    }
+
+    public void drawSolution(int[][] solution) {
+        setCanvas();
+        draw();
+        graphicsContext.setFill(Color.TURQUOISE);
+        for(int i=1; i<solution.length-1; i++){
+            double x = solution[i][1]* cellWidth;
+            double y = solution[i][0]* cellHeight;
+            graphicsContext.fillRect(x,y,cellWidth,cellHeight);
+        }
+    }
+
+    public void drawHint(int[] hint) {
+        setCanvas();
+        draw();
+        graphicsContext.setFill(Color.PINK);
+        double x = hint[1]* cellWidth;
+        double y = hint[0]* cellHeight;
+        graphicsContext.fillRect(x,y,cellWidth,cellHeight);
     }
 }

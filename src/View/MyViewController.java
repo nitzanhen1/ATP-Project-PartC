@@ -34,7 +34,6 @@ public class MyViewController extends AView implements Observer {
     public RadioButton buttonSolveMaze;
     public MenuItem buttonSave;
     private int [][] maze;
-    boolean flagSolution = false;
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
@@ -71,17 +70,17 @@ public class MyViewController extends AView implements Observer {
         myViewModel.generateMaze(rows,cols);
 
         buttonSolveMaze.setDisable(false);
+        buttonSolveMaze.setSelected(false);
         buttonHint.setDisable(false);
         buttonSave.setDisable(false);
     }
 
     public void solveMaze(ActionEvent actionEvent) {
-        if(!flagSolution)
+        if(buttonSolveMaze.selectedProperty().getValue())
             myViewModel.solveMaze();
         else
             mazeDisplayer.drawMaze(maze);
-        flagSolution=!flagSolution;
-
+        buttonSolveMaze.setSelected(!buttonSolveMaze.selectedProperty().getValue());
     }
 
     public void keyPressed(KeyEvent keyEvent){
@@ -108,7 +107,9 @@ public class MyViewController extends AView implements Observer {
     }
 
     public void getHint(ActionEvent actionEvent) {
+
         myViewModel.setHint();
+        buttonSolveMaze.setSelected(false);
     }
 
     //myTest:
@@ -137,8 +138,12 @@ public class MyViewController extends AView implements Observer {
 
                     break;
                 case 1: //solveMaze
+                    int[][] solution = myViewModel.getSolution();
+                    mazeDisplayer.drawSolution(solution);
                     break;
                 case 2: //getHint
+                    int[] hint = myViewModel.getHint();
+                    mazeDisplayer.drawHint(hint);
                     break;
                 case 3: //updatePlayerPosition
                     int row =myViewModel.getPlayerRow();
@@ -146,7 +151,8 @@ public class MyViewController extends AView implements Observer {
                     mazeDisplayer.setPosition(row,col);
                     setUpdatePlayerRow(row);
                     setUpdatePlayerCol(col);
-
+                    if(buttonSolveMaze.selectedProperty().getValue())
+                        myViewModel.solveMaze();
                     break;
             }
         }
