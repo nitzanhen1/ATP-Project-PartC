@@ -22,7 +22,7 @@ public class MainViewController extends AView{
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void chooseCharacter(ActionEvent actionEvent) {
+    public void characterButton(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             Parent root = fxmlLoader.load(getClass().getResource("CharactersView.fxml"));
@@ -35,11 +35,9 @@ public class MainViewController extends AView{
         }
     }
 
-
     public void chooseChar(MouseEvent mouseEvent) {
         character = (ImageView)mouseEvent.getSource();
         character.getId();
-
-
+        //send id
     }
 }

@@ -1,5 +1,6 @@
 package View;
 
+import ViewModel.MyViewModel;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -12,20 +13,30 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Observable;
 
 public abstract class AView implements Initializable, IView{
-    public static Stage stage;
+    protected MyViewModel myViewModel;
+    protected static Stage stage;
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
     }
 
+    public void setMyViewModel(MyViewModel myViewModel) {
+        this.myViewModel = myViewModel;
+    }
+
     public void newGame(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("MyView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MyView.fxml"));
+            Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, 800, 600);
             scene.getStylesheets().add(getClass().getResource("MyStyle.css").toExternalForm());
+
+            MyViewController myViewController = fxmlLoader.getController();
+            myViewController.setMyViewModel(myViewModel);
+            myViewModel.addObserver(myViewController);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -78,5 +89,18 @@ public abstract class AView implements Initializable, IView{
 
     public void muteUnmute(ActionEvent actionEvent) {
 
+    }
+
+    public void backToMain(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            Parent root = fxmlLoader.load(getClass().getResource("MainView.fxml"));
+            Scene scene = new Scene(root, 800, 600);
+            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

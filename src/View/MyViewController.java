@@ -1,5 +1,6 @@
 package View;
 
+import ViewModel.MyViewModel;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,9 +18,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 //<?import View.*?>
-public class MyViewController extends AView {
+public class MyViewController extends AView implements Observer {
+
     public MazeGenerator generator;
     public TextField textField_mazeRows;
     public TextField textField_mazeColumns;
@@ -30,13 +34,12 @@ public class MyViewController extends AView {
     public RadioButton buttonSolveMaze;
     public MenuItem buttonSave;
     private int [][] maze;
+    boolean flagSolution = false;
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
 
-    public void setUpdatePlayerRow(int row) {
-        this.updatePlayerRow.set("" + row);
-    }
+    public void setUpdatePlayerRow(int row) { this.updatePlayerRow.set("" + row); }
     public void setUpdatePlayerCol(int col) {
         this.updatePlayerCol.set(""+col);
     }
@@ -45,53 +48,58 @@ public class MyViewController extends AView {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lbl_PlayerRow.textProperty().bind(updatePlayerRow);
         lbl_PlayerCol.textProperty().bind(updatePlayerCol);
-    }
-
-    public void generateMaze(ActionEvent actionEvent) {
-        if(generator==null )
-            generator = new MazeGenerator();
-        int rows =Integer.valueOf(textField_mazeRows.getText());
-        int cols =Integer.valueOf(textField_mazeColumns.getText());
-        maze = generator.generateRandomMaze(rows,cols);
-
         stage.widthProperty().addListener(event -> {
             mazeDisplayer.widthProperty().setValue(stage.widthProperty().getValue()/1.5);
             mazeDisplayer.drawMaze(maze);
-            //mazeDisplayer.drawPlayerAndGoal();
         });
         stage.heightProperty().addListener(event -> {
             mazeDisplayer.heightProperty().setValue(stage.heightProperty().getValue()/(1.5));
             mazeDisplayer.drawMaze(maze);
-            //mazeDisplayer.drawPlayerAndGoal();
         });
+    }
 
-        mazeDisplayer.drawMaze(maze);
+
+
+    public void generateMaze(ActionEvent actionEvent) {
+        //if(generator==null )
+          //  generator = new MazeGenerator();
+        int rows =Integer.valueOf(textField_mazeRows.getText());
+        int cols =Integer.valueOf(textField_mazeColumns.getText());
+
+        //maze = generator.generateRandomMaze(rows,cols);
+
+        myViewModel.generateMaze(rows,cols);
+
         buttonSolveMaze.setDisable(false);
         buttonHint.setDisable(false);
         buttonSave.setDisable(false);
     }
 
     public void solveMaze(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("solving the maze...");
-        alert.show();
+        if(!flagSolution)
+            myViewModel.solveMaze();
+        else
+            mazeDisplayer.drawMaze(maze);
+        flagSolution=!flagSolution;
+
     }
 
     public void keyPressed(KeyEvent keyEvent){
-        //need to pass which key to the modelView
-        int row = mazeDisplayer.getPlayerRow();
-        int col = mazeDisplayer.getPlayerCol();
-        //need to check bounderies but not here!! where is next week lab
 
-        switch (keyEvent.getCode()) {
-            case UP -> row -= 1;
-            case DOWN -> row += 1;
-            case LEFT -> col -= 1;
-            case RIGHT -> col += 1;
+        int direction = -1;
+
+        switch (keyEvent.getCode()){
+            case NUMPAD1,DIGIT1 -> direction = 1;
+            case NUMPAD2,DIGIT2,DOWN -> direction = 2;
+            case NUMPAD3,DIGIT3 -> direction = 3;
+            case NUMPAD4,DIGIT4,LEFT -> direction = 4;
+            case NUMPAD6,DIGIT6,RIGHT -> direction = 6;
+            case NUMPAD7,DIGIT7 -> direction = 7;
+            case NUMPAD8,DIGIT8,UP -> direction = 8;
+            case NUMPAD9,DIGIT9 -> direction = 9;
+
         }
-        mazeDisplayer.setPosition(row,col);
-        setUpdatePlayerRow(row);
-        setUpdatePlayerCol(col);
+        myViewModel.updatePlayerPosition(direction);
         keyEvent.consume();
     }
 
@@ -100,21 +108,49 @@ public class MyViewController extends AView {
     }
 
     public void getHint(ActionEvent actionEvent) {
-
+        myViewModel.setHint();
     }
 
-    public void backToMain(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("MainView.fxml"));
-            Scene scene = new Scene(root, 800, 600);
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
+    //myTest:
+    public void setCharacter(String charName){
+        String filePath = "./resources/images/characters_goals/"+charName+".png";
+        mazeDisplayer.setImageFileNamePlayer(filePath);
+    }
+
+    @Override
+    public void exit() {
+        myViewModel.exit();
+        super.exit();
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        if(o instanceof MyViewModel) {
+            switch ((int) arg) {
+                case 0: //generateMaze
+                    this.maze = myViewModel.getMaze();
+                    mazeDisplayer.drawMaze(maze);
+                    this.mazeDisplayer.setGoal(myViewModel.getGoalRow(), myViewModel.getGoalCol());
+                    setUpdatePlayerRow(myViewModel.getPlayerRow());
+                    setUpdatePlayerCol(myViewModel.getPlayerCol());
+                    this.mazeDisplayer.setPosition(myViewModel.getPlayerRow(), myViewModel.getPlayerCol());
+
+                    break;
+                case 1: //solveMaze
+                    break;
+                case 2: //getHint
+                    break;
+                case 3: //updatePlayerPosition
+                    int row =myViewModel.getPlayerRow();
+                    int col =myViewModel.getPlayerCol();
+                    mazeDisplayer.setPosition(row,col);
+                    setUpdatePlayerRow(row);
+                    setUpdatePlayerCol(col);
+
+                    break;
+            }
         }
-    }
 
+    }
 }
 

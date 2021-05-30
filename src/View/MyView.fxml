@@ -123,7 +123,7 @@
     <center>
         <Pane BorderPane.alignment="CENTER">
             <children>
-                <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNamePlayer="./resources/images/characters_goals/joey.png" imageFileNameWall="./resources/images/coffee1.png" onKeyPressed="#keyPressed" width="400.0" />
+                <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch5.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee1.png" onKeyPressed="#keyPressed" width="400.0" />
             </children>
         </Pane>
     </center>

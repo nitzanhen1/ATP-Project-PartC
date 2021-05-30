@@ -1,4 +1,6 @@
+import Model.MyModel;
 import View.MainViewController;
+import ViewModel.MyViewModel;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +13,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        MyModel model = new MyModel();
+        MyViewModel myViewModel = new MyViewModel(model);
+        model.addObserver(myViewModel);
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("View/MainView.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Friends Maze");
@@ -20,6 +27,8 @@ public class Main extends Application {
 
         MainViewController mainViewController =fxmlLoader.getController();
         mainViewController.setStage(primaryStage);
+        mainViewController.setMyViewModel(myViewModel);
+
         primaryStage.show();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {

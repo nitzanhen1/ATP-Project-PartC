@@ -39,7 +39,7 @@
             <Label fx:id="instructions" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="360.0" text="Game Instructions" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" />
             <Text layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help Friends navigate through the maze and reach the couch." wrappingWidth="580.8033447265625"/>
             <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can choose which of the characters will go on the mission !!" wrappingWidth="551.8717956542969"/>
-            <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start a new game press play or go to file-&gt;new" wrappingWidth="551.8717956542969"/>
+            <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start a new game press play or go to File-&gt;New" wrappingWidth="551.8717956542969"/>
             <Text layoutX="14.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To navigate your character use your keyboard NumPad as shown below: " wrappingWidth="600.0"/>
             <Text layoutX="14.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you get stuck, you can always ask for a Hint" wrappingWidth="551.8717956542969"/>
             <Text layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remember, you cannot step on the coffee cups !" wrappingWidth="600.0"/>

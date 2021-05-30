@@ -1,15 +1,21 @@
 .root{
-    -fx-background-color: salmon;
+    -fx-background-color: white;
 }
 
 BorderPane{
-    -fx-background-image: url("//resources/images/open8.png");
+    -fx-background-image: url("//resources/images/open8.jpg");
     -fx-background-size: stretch;
 }
+
+#GridChoose{
+    -fx-background-color: antiquewhite;
+}
+
 #helpAnchorPane{
     -fx-background-image: url("//resources/images/milk.jpeg");
     -fx-background-size: stretch;
 }
+
 #chooseBackground{
     -fx-background-image: url("//resources/images/backgroundChoose.jpeg");
     -fx-background-size: stretch;
@@ -38,7 +44,7 @@ ImageView{
 }
 
 #joey{
-    -fx-image: url("//resources/images/charMenu/joey5.gif");
+    -fx-image: url("//resources/images/charMenu/j1.gif");
     -fx-background-color: green;
 }
 #ross{
@@ -84,6 +90,8 @@ Text{
     -fx-font-size: 26;
 }
 
+
+
 Button {
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
@@ -91,6 +99,10 @@ Button {
     -fx-font-size: 22;
     -fx-background-color: linear-gradient(#d8c495,#d8a52a);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+#buttonBack{
+    -fx-font-size: 16;
 }
 
 Button:hover {

@@ -72,7 +72,7 @@
               </rowConstraints>
                <children>
                   <Button mnemonicParsing="false" onAction="#newGame" prefHeight="41.0" prefWidth="151.0" text="Play" />
-                  <Button mnemonicParsing="false" onAction="#chooseCharacter" prefHeight="41.0" prefWidth="151.0" text="Character" textAlignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#characterButton" prefHeight="41.0" prefWidth="151.0" text="Character" textAlignment="CENTER" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" onAction="#muteUnmute" prefHeight="41.0" prefWidth="155.0" text="Mute/Unmute" GridPane.columnIndex="1" />
                   <Button mnemonicParsing="false" onAction="#exit" prefHeight="41.0" prefWidth="155.0" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
