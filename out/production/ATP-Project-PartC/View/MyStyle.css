@@ -4,7 +4,7 @@
 
 
 BorderPane{
-    -fx-background-image: url("//resources/images/brickwall3.png");
+    -fx-background-image: url("//resources/images/brickwall3.jpg");
     -fx-background-size: stretch;
 }
 Label{

@@ -3,31 +3,49 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane fx:id="chooseBackground" prefHeight="572.0" prefWidth="743.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
-   <children>
-      <GridPane fx:id="GridChoose" layoutX="140.0" layoutY="146.0" prefHeight="333.0" prefWidth="540.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="210.0" minHeight="10.0" prefHeight="177.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+<BorderPane fx:id="chooseBackground" prefHeight="572.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
+   <left>
+      <Button fx:id="buttonBack" onAction="#backToMain" prefHeight="31.0" prefWidth="65.0" text="&lt; back" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Button fx:id="buttonPlay" onAction="#newGame" prefHeight="31.0" prefWidth="65.0" text="play &gt;" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <AnchorPane prefHeight="318.0" prefWidth="743.0" BorderPane.alignment="CENTER" >
          <children>
-            <ImageView fx:id="monica" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ross" fitHeight="175.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="joey" fitHeight="175.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="rachel" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fx:id="phoebe" fitHeight="172.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="chandler" fitHeight="177.0" fitWidth="179.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <Button fx:id="monica" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0" >
+               <graphic>
+                  <ImageView fx:id="monicaImage" fitHeight="134.0" fitWidth="160.0" onMouseClicked="#chooseChar" pickOnBounds="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="ross" layoutX="211.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0">
+               <graphic>
+                  <ImageView fx:id="rossImage" fitHeight="130.0" fitWidth="162.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="rachel" layoutX="421.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0">
+               <graphic>
+                  <ImageView fx:id="rachelImage" fitHeight="128.0" fitWidth="167.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="chandler" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0">
+               <graphic>
+                  <ImageView fx:id="chandlerImage" fitHeight="133.0" fitWidth="164.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="phoebe" layoutX="211.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0">
+               <graphic>
+                  <ImageView fx:id="phoebeImage" fitHeight="130.0" fitWidth="166.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="joey" layoutX="421.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="149.0" prefWidth="190.0">
+               <graphic>
+                  <ImageView fx:id="joeyImage" fitHeight="117.0" fitWidth="164.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
          </children>
-      </GridPane>
-      <Button fx:id="buttonBack" layoutY="538.0" onAction="#backToMain" prefHeight="31.0" prefWidth="65.0" text="&lt; back" />
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </center>
+</BorderPane>

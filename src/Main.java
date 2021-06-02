@@ -6,8 +6,13 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import javafx.util.Duration;
+
+import java.net.URISyntaxException;
 
 public class Main extends Application {
 
@@ -35,6 +40,7 @@ public class Main extends Application {
                 mainViewController.exit();
             }
         });
+
     }
 
 

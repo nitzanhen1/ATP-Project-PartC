@@ -4,18 +4,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainViewController extends AView{
 
-    public ImageView character;
+    public javafx.scene.control.Button character;
 
 
     @Override
@@ -38,8 +43,7 @@ public class MainViewController extends AView{
     }
 
     public void chooseChar(MouseEvent mouseEvent) {
-        character = (ImageView)mouseEvent.getSource();
-        character.getId();
-        //send id
+        character = (Button)mouseEvent.getSource();
+        chosenChar = character.getId();
     }
 }
