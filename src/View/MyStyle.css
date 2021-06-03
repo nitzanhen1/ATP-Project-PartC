@@ -1,7 +1,10 @@
 .root{
     -fx-background-color: Salmon;
 }
-
+ScrollPane{
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
 
 BorderPane{
     -fx-background-image: url("//resources/images/brickwall3.jpg");

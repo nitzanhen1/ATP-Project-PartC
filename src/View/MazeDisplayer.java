@@ -33,6 +33,14 @@ public class MazeDisplayer extends Canvas {
         return playerCol;
     }
 
+    public double getCellHeight() {
+        return cellHeight;
+    }
+
+    public double getCellWidth() {
+        return cellWidth;
+    }
+
     public void setPosition(int row, int col){
         playerRow=row;
         playerCol=col;

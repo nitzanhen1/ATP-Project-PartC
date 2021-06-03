@@ -5,10 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ScrollEvent;
-import javafx.scene.input.ZoomEvent;
+import javafx.scene.input.*;
 
 import java.net.URL;
 import java.util.Observable;
@@ -25,10 +22,12 @@ public class MyViewController extends AView implements Observer {
     public Button buttonHint;
     public RadioButton buttonSolveMaze;
     public MenuItem buttonSave;
+    public ScrollPane scrollPane;
     private int [][] maze;
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
+    private boolean flagPlayer=false;
 
     public void setUpdatePlayerRow(int row) { this.updatePlayerRow.set("" + row); }
     public void setUpdatePlayerCol(int col) {
@@ -139,13 +138,15 @@ public class MyViewController extends AView implements Observer {
     }
 
     private void playerMoved() {
-        int row =myViewModel.getPlayerRow();
-        int col =myViewModel.getPlayerCol();
+        setPlayerPosition(myViewModel.getPlayerRow(),myViewModel.getPlayerCol());
+
+        if(buttonSolveMaze.selectedProperty().getValue())
+            myViewModel.solveMaze();
+    }
+    private void setPlayerPosition(int row, int col){
         mazeDisplayer.setPosition(row,col);
         setUpdatePlayerRow(row);
         setUpdatePlayerCol(col);
-        if(buttonSolveMaze.selectedProperty().getValue())
-            myViewModel.solveMaze();
     }
 
     private void goalReached() {
@@ -153,8 +154,59 @@ public class MyViewController extends AView implements Observer {
         //information about winning
     }
 
-    public void zoomin(ZoomEvent zoomEvent) {
-        System.out.println("scroll");
+    public void zoomIn(ZoomEvent zoomEvent) {
+        double zoomFactor =zoomEvent.getZoomFactor();
+        mazeDisplayer.setScaleX(mazeDisplayer.getScaleX()*zoomFactor);
+        mazeDisplayer.setScaleY(mazeDisplayer.getScaleY()*zoomFactor);
+        zoomEvent.consume();
     }
+
+    public void updateCoordinates(MouseEvent mouseEvent) {
+
+        //myViewModel.MouseMove()
+        double mouseCol = mouseEvent.getX();
+        double mouseRow = mouseEvent.getY();
+        double cellWidth = mazeDisplayer.getCellWidth();
+        double cellHeight = mazeDisplayer.getCellHeight();
+        double playerLeftBound = cellWidth * mazeDisplayer.getPlayerRow();
+        double playerUpBound = cellHeight * mazeDisplayer.getPlayerCol();
+        double playerRightBound = cellWidth + playerLeftBound;
+        double playerDownBound = cellHeight + playerUpBound;
+        if (playerLeftBound <= mouseCol && mouseCol <= playerRightBound && playerUpBound <= mouseRow && mouseRow <= playerDownBound) {
+            flagPlayer = true;
+
+        }
+    }
+    public void dragCharacter(MouseEvent mouseEvent) {
+        if(!flagPlayer)
+            return;
+        System.out.println("true");
+        double mouseCol =  mouseEvent.getX();
+        double mouseRow = mouseEvent.getY();
+        double cellWidth = mazeDisplayer.getCellWidth();
+        double cellHeight = mazeDisplayer.getCellHeight();
+        double playerLeftBound = cellWidth*mazeDisplayer.getPlayerRow();
+        double playerUpBound = cellHeight*mazeDisplayer.getPlayerCol();
+        double playerRightBound = cellWidth+playerLeftBound;
+        double playerDownBound = cellHeight+playerUpBound;
+        setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol());
+        if(mouseCol<playerLeftBound && mouseCol>= playerLeftBound-cellWidth){
+            if(mouseRow<playerUpBound && mouseRow >= playerUpBound-cellHeight) {
+                setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol() - 1);
+                System.out.println("UPLEFT");
+            }
+            else {
+                setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol());
+                System.out.println("UP");
+            }
+        }
+        mouseEvent.consume();
+
+//        System.out.println("mouse: "+ mouseCol+" "+mouseRow);
+//        System.out.println("point1: "+playerLeftBound+" "+playerUpBound);
+//        System.out.println("point2: "+playerRightBound+" "+playerDownBound);
+
+    }
+
 }
 
