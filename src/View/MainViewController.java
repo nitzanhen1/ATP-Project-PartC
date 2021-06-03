@@ -44,6 +44,7 @@ public class MainViewController extends AView{
 
     public void chooseChar(MouseEvent mouseEvent) {
         character = (Button)mouseEvent.getSource();
-        chosenChar = character.getId();
+        setChosenChar(character.getId());
+
     }
 }

@@ -18,7 +18,7 @@ import java.util.Observable;
 public abstract class AView implements Initializable, IView{
     protected MyViewModel myViewModel;
     protected static Stage stage;
-    public String chosenChar="monica";
+    private String chosenChar="monica";
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
@@ -36,12 +36,13 @@ public abstract class AView implements Initializable, IView{
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MyView.fxml"));
             Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, stage.getWidth(), stage.getHeight());
+            Scene scene = new Scene(root, stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
             scene.getStylesheets().add(getClass().getResource("MyStyle.css").toExternalForm());
 
             MyViewController myViewController = fxmlLoader.getController();
             myViewController.setMyViewModel(myViewModel);
-            myViewController.setCharacter(chosenChar);
+            myViewController.setChosenChar(chosenChar);
+            //myViewController.setCharacter(chosenChar);
             myViewModel.addObserver(myViewController);
             stage.setScene(scene);
             stage.show();
@@ -101,7 +102,7 @@ public abstract class AView implements Initializable, IView{
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainView.fxml"));
             Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, stage.getWidth(), stage.getHeight());
+            Scene scene = new Scene(root, stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
             scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
             MainViewController mainViewController = fxmlLoader.getController();
             mainViewController.setMyViewModel(myViewModel);

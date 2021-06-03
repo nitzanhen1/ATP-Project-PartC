@@ -15,10 +15,10 @@ public class MazeDisplayer extends Canvas {
     StringProperty imageFileNameWall= new SimpleStringProperty();
     StringProperty imageFileNamePlayer= new SimpleStringProperty();
     StringProperty imageFileNameGoal= new SimpleStringProperty();
-    private int PlayerRow=0;
-    private int PlayerCol=0;
-    private int GoalRow=0;
-    private int GoalCol=0;
+    private int playerRow=0;
+    private int playerCol=0;
+    private int goalRow=0;
+    private int goalCol=0;
     private int rows;
     private int cols;
     private double cellHeight;
@@ -26,30 +26,30 @@ public class MazeDisplayer extends Canvas {
     private GraphicsContext graphicsContext;
 
     public int getPlayerRow() {
-        return PlayerRow;
+        return playerRow;
     }
 
     public int getPlayerCol() {
-        return PlayerCol;
+        return playerCol;
     }
 
     public void setPosition(int row, int col){
-        PlayerRow=row;
-        PlayerCol=col;
+        playerRow=row;
+        playerCol=col;
         draw();
     }
 
     public int getGoalRow() {
-        return GoalRow;
+        return goalRow;
     }
 
     public int getGoalCol() {
-        return GoalCol;
+        return goalCol;
     }
 
     public void setGoal(int row, int col){
-        GoalRow=row;
-        GoalCol=col;
+        goalRow=row;
+        goalCol=col;
     }
 
     public String getImageFileNameWall() {
@@ -174,6 +174,8 @@ public class MazeDisplayer extends Canvas {
     }
 
     public void drawHint(int[] hint) {
+        if(hint[0]==this.goalRow && hint[1]==this.goalCol)
+            return;
         setCanvas();
         draw();
         graphicsContext.setFill(Color.PINK);

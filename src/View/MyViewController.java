@@ -1,26 +1,13 @@
 package View;
 
 import ViewModel.MyViewModel;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Observable;
 import java.util.Observer;
@@ -28,7 +15,6 @@ import java.util.ResourceBundle;
 //<?import View.*?>
 public class MyViewController extends AView implements Observer {
 
-    public MazeGenerator generator;
     public TextField textField_mazeRows;
     public TextField textField_mazeColumns;
     public MazeDisplayer mazeDisplayer;
@@ -51,25 +37,13 @@ public class MyViewController extends AView implements Observer {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lbl_PlayerRow.textProperty().bind(updatePlayerRow);
         lbl_PlayerCol.textProperty().bind(updatePlayerCol);
-        stage.widthProperty().addListener(event -> {
-            mazeDisplayer.widthProperty().setValue(stage.widthProperty().getValue()/1.5);
-            mazeDisplayer.drawMaze(maze);
-        });
-        stage.heightProperty().addListener(event -> {
-            mazeDisplayer.heightProperty().setValue(stage.heightProperty().getValue()/(1.5));
-            mazeDisplayer.drawMaze(maze);
-        });
+        stage.widthProperty().addListener(event -> drawMaze());
+        stage.heightProperty().addListener(event -> drawMaze());
     }
 
-
-
     public void generateMaze(ActionEvent actionEvent) {
-        //if(generator==null )
-          //  generator = new MazeGenerator();
         int rows =Integer.valueOf(textField_mazeRows.getText());
         int cols =Integer.valueOf(textField_mazeColumns.getText());
-
-        //maze = generator.generateRandomMaze(rows,cols);
 
         myViewModel.generateMaze(rows,cols);
 
@@ -80,11 +54,12 @@ public class MyViewController extends AView implements Observer {
     }
 
     public void solveMaze(ActionEvent actionEvent) {
-        if(buttonSolveMaze.selectedProperty().getValue())
+        boolean state = buttonSolveMaze.selectedProperty().getValue();
+        if(state)
             myViewModel.solveMaze();
         else
-            mazeDisplayer.drawMaze(maze);
-        buttonSolveMaze.setSelected(!buttonSolveMaze.selectedProperty().getValue());
+            drawMaze();
+        //buttonSolveMaze.setSelected(!state);
     }
 
     public void keyPressed(KeyEvent keyEvent){
@@ -116,7 +91,13 @@ public class MyViewController extends AView implements Observer {
         buttonSolveMaze.setSelected(false);
     }
 
-    //myTest:
+    @Override
+    public void setChosenChar(String chosenChar) {
+        String filePath = "./resources/images/characters_goals/"+chosenChar+".png";
+        mazeDisplayer.setImageFileNamePlayer(filePath);
+        super.setChosenChar(chosenChar);
+    }
+
     public void setCharacter(String charName){
         String filePath = "./resources/images/characters_goals/"+charName+".png";
         mazeDisplayer.setImageFileNamePlayer(filePath);
@@ -128,13 +109,19 @@ public class MyViewController extends AView implements Observer {
         super.exit();
     }
 
+    private void drawMaze(){
+        mazeDisplayer.setWidth(stage.getWidth()/1.5);
+        mazeDisplayer.setHeight(stage.getHeight()/1.5);
+        mazeDisplayer.drawMaze(maze);
+    }
+
     @Override
     public void update(Observable o, Object arg) {
         if(o instanceof MyViewModel) {
             switch ((int) arg) {
                 case 0: //generateMaze
                     this.maze = myViewModel.getMaze();
-                    mazeDisplayer.drawMaze(maze);
+                    drawMaze();
                     this.mazeDisplayer.setGoal(myViewModel.getGoalRow(), myViewModel.getGoalCol());
                     setUpdatePlayerRow(myViewModel.getPlayerRow());
                     setUpdatePlayerCol(myViewModel.getPlayerCol());
@@ -160,8 +147,6 @@ public class MyViewController extends AView implements Observer {
                     break;
             }
         }
-
     }
-
 }
 
