@@ -1,3 +1,4 @@
+import Model.IModel;
 import Model.MyModel;
 import View.MainViewController;
 import ViewModel.MyViewModel;
@@ -19,22 +20,21 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        MyModel model = new MyModel();
-        MyViewModel myViewModel = new MyViewModel(model);
-        model.addObserver(myViewModel);
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("View/MainView.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Friends Maze");
         Scene scene = new Scene(root, 800, 600);
         scene.getStylesheets().add(getClass().getResource("View/MainStyle.css").toExternalForm());
         primaryStage.setScene(scene);
+        primaryStage.show();
 
+        IModel model = new MyModel();
+        MyViewModel myViewModel = new MyViewModel(model);
         MainViewController mainViewController =fxmlLoader.getController();
         mainViewController.setStage(primaryStage);
         mainViewController.setMyViewModel(myViewModel);
 
-        primaryStage.show();
+
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
                 mainViewController.exit();

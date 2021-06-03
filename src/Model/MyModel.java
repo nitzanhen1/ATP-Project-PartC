@@ -5,12 +5,15 @@ import IO.MyDecompressorInputStream;
 import Server.*;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
+import algorithms.search.MazeState;
 import algorithms.search.Solution;
 
 import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Observable;
+import java.util.Observer;
 
 public class MyModel extends Observable implements IModel{
 
@@ -25,11 +28,6 @@ public class MyModel extends Observable implements IModel{
     private int goalCol;
 
     public MyModel() {
-        /*maze = null;
-        playerRow =0;
-        playerRow =0;
-        goalRow=0;
-        goalCol=0;*/
         generateMazeServer = new Server(5400,1000,new ServerStrategyGenerateMaze());
         solveMazeServer = new Server(5401,1000,new ServerStrategySolveSearchProblem());
         generateMazeServer.start();
@@ -38,9 +36,23 @@ public class MyModel extends Observable implements IModel{
 
     public int[][] getMaze() {return maze.getMaze(); }
 
-    public Solution getSolution() {return solution; }
+    public int[][] getSolution() {
+        ArrayList<AState> sol = solution.getSolutionPath();
+        int[][] solutionAsArray = new int[sol.size()][2];
+        for (int i = 0; i < sol.size(); i++) {
+            solutionAsArray[i][0] = ((MazeState) sol.get(i)).getRowIndex();
+            solutionAsArray[i][1] = ((MazeState) sol.get(i)).getColumnIndex();
+        }
+        return solutionAsArray;
+    }
 
-    public AState getHint() {return hint; }
+    public int[] getHint() {
+        int[] hint = new int[2];
+        hint[0] = ((MazeState) this.hint).getRowIndex();
+        hint[1] = ((MazeState) this.hint).getColumnIndex();
+
+        return hint;
+    }
 
     public int getPlayerRow() {return playerRow; }
 
@@ -82,20 +94,20 @@ public class MyModel extends Observable implements IModel{
         goalRow=maze.getGoalPosition().getRowIndex();
         goalCol=maze.getGoalPosition().getColumnIndex();
         setChanged();
-        notifyObservers(0);
+        notifyObservers("maze generated");
     }
 
     public void solveMaze() {
         updateSolution();
         setChanged();
-        notifyObservers(1);
+        notifyObservers("maze solved");
     }
 
     public void setHint(){
         updateSolution();
         hint=solution.getSolutionPath().get(1);
         setChanged();
-        notifyObservers(2);
+        notifyObservers("hint generated");
     }
 
     private void updateSolution(){
@@ -122,48 +134,40 @@ public class MyModel extends Observable implements IModel{
         }
     }
 
-    public void updatePlayerPosition(int direction){
+    public void updatePlayerPosition(MovementDirection direction){
 
         int tempRow=playerRow;
         int tempCol=playerCol;
         switch (direction)
         {
-            case 1: //Down + Left
-                if(maze.getCell(playerRow,playerCol-1)==0 ||maze.getCell(playerRow+1,playerCol)==0 ) {
+            case DOWNLEFT -> {
+                if (maze.getCell(playerRow, playerCol - 1) == 0 || maze.getCell(playerRow + 1, playerCol) == 0) {
                     tempRow++;
                     tempCol--;
                 }
-                break;
-            case 2: //Down
-                tempRow++;
-                break;
-            case 3: // Down + Right
-                if(maze.getCell(playerRow,playerCol+1)==0 ||maze.getCell(playerRow+1,playerCol)==0 ) {
+            }
+            case DOWN -> tempRow++;
+            case DOWNRIGHT -> {
+                if (maze.getCell(playerRow, playerCol + 1) == 0 || maze.getCell(playerRow + 1, playerCol) == 0) {
                     tempRow++;
                     tempCol++;
                 }
-                break;
-            case 4: // Left
-                tempCol--;
-                break;
-            case 6: //Right
-                tempCol++;
-                break;
-            case 7: //Up + Left
-                if(maze.getCell(playerRow,playerCol-1)==0 ||maze.getCell(playerRow-1,playerCol)==0 ) {
+            }
+            case LEFT -> tempCol--;
+            case RIGHT -> tempCol++;
+            case UPLEFT -> {
+                if (maze.getCell(playerRow, playerCol - 1) == 0 || maze.getCell(playerRow - 1, playerCol) == 0) {
                     tempRow--;
                     tempCol--;
                 }
-                break;
-            case 8: //Up
-                tempRow--;
-                break;
-            case 9: // Up + Right
-                if(maze.getCell(playerRow,playerCol+1)==0 ||maze.getCell(playerRow-1,playerCol)==0 ) {
+            }
+            case UP -> tempRow--;
+            case UPRIGHT -> {
+                if (maze.getCell(playerRow, playerCol + 1) == 0 || maze.getCell(playerRow - 1, playerCol) == 0) {
                     tempRow--;
                     tempCol++;
                 }
-                break;
+            }
         }
 
         if(maze.getCell(tempRow,tempCol)==0){
@@ -171,7 +175,9 @@ public class MyModel extends Observable implements IModel{
             playerCol=tempCol;
         }
         setChanged();
-        notifyObservers(3);
+        notifyObservers("player moved");
+        if(playerRow==goalRow && playerCol==goalCol)
+            notifyObservers("goal reached");
     }
 
     public void exit(){
@@ -222,5 +228,10 @@ public class MyModel extends Observable implements IModel{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void assignObserver(Observer o) {
+        this.addObserver(o);
     }
 }

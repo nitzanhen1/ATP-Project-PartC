@@ -9,11 +9,12 @@ import algorithms.search.Solution;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Observer;
 
 public interface IModel {
     int[][] getMaze();
-    Solution getSolution();
-    AState getHint();
+    int[][] getSolution();
+    int[] getHint();
     int getPlayerRow();
     int getPlayerCol();
     int getGoalRow();
@@ -21,8 +22,9 @@ public interface IModel {
     void generateMaze(int row, int col);
     void solveMaze();
     void setHint();
-    void updatePlayerPosition(int direction);
+    void updatePlayerPosition(MovementDirection direction);
     void exit();
     void saveMaze(File file);
     void loadMaze(File file);
+    void assignObserver(Observer o);
 }

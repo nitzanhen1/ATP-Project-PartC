@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ScrollEvent;
+import javafx.scene.input.ZoomEvent;
 
 import java.net.URL;
 import java.util.Observable;
@@ -41,6 +43,12 @@ public class MyViewController extends AView implements Observer {
         stage.heightProperty().addListener(event -> drawMaze());
     }
 
+    @Override
+    public void setMyViewModel(MyViewModel myViewModel) {
+        super.setMyViewModel(myViewModel);
+        this.myViewModel.addObserver(this);
+    }
+
     public void generateMaze(ActionEvent actionEvent) {
         int rows =Integer.valueOf(textField_mazeRows.getText());
         int cols =Integer.valueOf(textField_mazeColumns.getText());
@@ -59,25 +67,10 @@ public class MyViewController extends AView implements Observer {
             myViewModel.solveMaze();
         else
             drawMaze();
-        //buttonSolveMaze.setSelected(!state);
     }
 
     public void keyPressed(KeyEvent keyEvent){
-
-        int direction = -1;
-
-        switch (keyEvent.getCode()){
-            case NUMPAD1,DIGIT1 -> direction = 1;
-            case NUMPAD2,DIGIT2,DOWN -> direction = 2;
-            case NUMPAD3,DIGIT3 -> direction = 3;
-            case NUMPAD4,DIGIT4,LEFT -> direction = 4;
-            case NUMPAD6,DIGIT6,RIGHT -> direction = 6;
-            case NUMPAD7,DIGIT7 -> direction = 7;
-            case NUMPAD8,DIGIT8,UP -> direction = 8;
-            case NUMPAD9,DIGIT9 -> direction = 9;
-
-        }
-        myViewModel.updatePlayerPosition(direction);
+        myViewModel.movePlayer(keyEvent);
         keyEvent.consume();
     }
 
@@ -86,7 +79,6 @@ public class MyViewController extends AView implements Observer {
     }
 
     public void getHint(ActionEvent actionEvent) {
-
         myViewModel.setHint();
         buttonSolveMaze.setSelected(false);
     }
@@ -96,11 +88,6 @@ public class MyViewController extends AView implements Observer {
         String filePath = "./resources/images/characters_goals/"+chosenChar+".png";
         mazeDisplayer.setImageFileNamePlayer(filePath);
         super.setChosenChar(chosenChar);
-    }
-
-    public void setCharacter(String charName){
-        String filePath = "./resources/images/characters_goals/"+charName+".png";
-        mazeDisplayer.setImageFileNamePlayer(filePath);
     }
 
     @Override
@@ -113,40 +100,61 @@ public class MyViewController extends AView implements Observer {
         mazeDisplayer.setWidth(stage.getWidth()/1.5);
         mazeDisplayer.setHeight(stage.getHeight()/1.5);
         mazeDisplayer.drawMaze(maze);
+        if(buttonSolveMaze.selectedProperty().getValue())
+            mazeDisplayer.drawSolution(myViewModel.getSolution());
+
     }
 
     @Override
     public void update(Observable o, Object arg) {
         if(o instanceof MyViewModel) {
-            switch ((int) arg) {
-                case 0: //generateMaze
-                    this.maze = myViewModel.getMaze();
-                    drawMaze();
-                    this.mazeDisplayer.setGoal(myViewModel.getGoalRow(), myViewModel.getGoalCol());
-                    setUpdatePlayerRow(myViewModel.getPlayerRow());
-                    setUpdatePlayerCol(myViewModel.getPlayerCol());
-                    this.mazeDisplayer.setPosition(myViewModel.getPlayerRow(), myViewModel.getPlayerCol());
-
-                    break;
-                case 1: //solveMaze
-                    int[][] solution = myViewModel.getSolution();
-                    mazeDisplayer.drawSolution(solution);
-                    break;
-                case 2: //getHint
-                    int[] hint = myViewModel.getHint();
-                    mazeDisplayer.drawHint(hint);
-                    break;
-                case 3: //updatePlayerPosition
-                    int row =myViewModel.getPlayerRow();
-                    int col =myViewModel.getPlayerCol();
-                    mazeDisplayer.setPosition(row,col);
-                    setUpdatePlayerRow(row);
-                    setUpdatePlayerCol(col);
-                    if(buttonSolveMaze.selectedProperty().getValue())
-                        myViewModel.solveMaze();
-                    break;
+            String change = (String)arg;
+            switch (change) {
+                case "maze generated"-> mazeGenerated();
+                case "player moved" -> playerMoved();
+                case "hint generated" -> hintGenerated();
+                case "maze solved" -> mazeSolved();
+                case "goal reached" ->goalReached();
             }
         }
+    }
+
+    private void mazeGenerated() {
+        this.maze = myViewModel.getMaze();
+        drawMaze();
+        this.mazeDisplayer.setGoal(myViewModel.getGoalRow(), myViewModel.getGoalCol());
+        playerMoved();
+
+    }
+
+    private void mazeSolved() {
+        int[][] solution = myViewModel.getSolution();
+        mazeDisplayer.drawSolution(solution);
+
+    }
+
+    private void hintGenerated() {
+        int[] hint = myViewModel.getHint();
+        mazeDisplayer.drawHint(hint);
+    }
+
+    private void playerMoved() {
+        int row =myViewModel.getPlayerRow();
+        int col =myViewModel.getPlayerCol();
+        mazeDisplayer.setPosition(row,col);
+        setUpdatePlayerRow(row);
+        setUpdatePlayerCol(col);
+        if(buttonSolveMaze.selectedProperty().getValue())
+            myViewModel.solveMaze();
+    }
+
+    private void goalReached() {
+        //play winning music
+        //information about winning
+    }
+
+    public void zoomin(ZoomEvent zoomEvent) {
+        System.out.println("scroll");
     }
 }
 

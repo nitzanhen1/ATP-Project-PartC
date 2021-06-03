@@ -1,10 +1,12 @@
 package ViewModel;
 
 import Model.IModel;
+import Model.MovementDirection;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
 import algorithms.search.MazeState;
 import algorithms.search.Solution;
+import javafx.scene.input.KeyEvent;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,7 +17,9 @@ public class MyViewModel extends Observable implements Observer {
     private IModel model;
 
     public MyViewModel(IModel model) {
+
         this.model = model;
+        this.model.assignObserver(this);
     }
 
     @Override
@@ -29,22 +33,9 @@ public class MyViewModel extends Observable implements Observer {
 
     public int[][] getMaze() {return model.getMaze(); }
 
-    public int[][] getSolution() {
-        ArrayList<AState> sol = model.getSolution().getSolutionPath();
-        int[][] solutionAsArray = new int[sol.size()][2];
-        for (int i = 0; i < sol.size(); i++) {
-            solutionAsArray[i][0] = ((MazeState) sol.get(i)).getRowIndex();
-            solutionAsArray[i][1] = ((MazeState) sol.get(i)).getColumnIndex();
-        }
-        return solutionAsArray;
-    }
+    public int[][] getSolution() {return model.getSolution(); }
 
-    public int[] getHint() {
-        int[] hint = new int[2];
-        hint[0] = ((MazeState) model.getHint()).getRowIndex();
-        hint[1] = ((MazeState) model.getHint()).getColumnIndex();
-        return hint;
-    }
+    public int[] getHint() {return model.getHint();}
 
     public int getPlayerRow() {return model.getPlayerRow(); }
 
@@ -66,7 +57,24 @@ public class MyViewModel extends Observable implements Observer {
 
     public void setHint() {model.setHint(); }
 
-    public void updatePlayerPosition(int direction){model.updatePlayerPosition(direction);}
+    public void movePlayer(KeyEvent keyEvent){
+        MovementDirection direction;
+
+        switch (keyEvent.getCode()){
+            case NUMPAD1,DIGIT1 -> direction = MovementDirection.DOWNLEFT;
+            case NUMPAD2,DIGIT2,DOWN -> direction = MovementDirection.DOWN;
+            case NUMPAD3,DIGIT3 -> direction = MovementDirection.DOWNRIGHT;
+            case NUMPAD4,DIGIT4,LEFT -> direction =MovementDirection.LEFT;
+            case NUMPAD6,DIGIT6,RIGHT -> direction = MovementDirection.RIGHT;
+            case NUMPAD7,DIGIT7 -> direction = MovementDirection.UPLEFT;
+            case NUMPAD8,DIGIT8,UP -> direction = MovementDirection.UP;
+            case NUMPAD9,DIGIT9 -> direction = MovementDirection.UPRIGHT;
+            default -> {return;}
+
+        }
+
+        model.updatePlayerPosition(direction);
+    }
 
     public void exit()
     {

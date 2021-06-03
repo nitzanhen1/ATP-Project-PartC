@@ -32,23 +32,28 @@ public abstract class AView implements Initializable, IView{
         this.myViewModel = myViewModel;
     }
 
-    public void newGame(ActionEvent actionEvent) {
+    protected void changeScene(String fxmlName, String cssName){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MyView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlName));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
-            scene.getStylesheets().add(getClass().getResource("MyStyle.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource(cssName).toExternalForm());
 
-            MyViewController myViewController = fxmlLoader.getController();
-            myViewController.setMyViewModel(myViewModel);
-            myViewController.setChosenChar(chosenChar);
-            //myViewController.setCharacter(chosenChar);
-            myViewModel.addObserver(myViewController);
+            AView viewController = fxmlLoader.getController();
+            viewController.setMyViewModel(myViewModel);
+            viewController.setChosenChar(chosenChar);
+
             stage.setScene(scene);
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    public void newGame(ActionEvent actionEvent) {
+        changeScene("MyView.fxml","MyStyle.css");
     }
 
     public void saveGame(ActionEvent actionEvent) {
@@ -64,8 +69,8 @@ public abstract class AView implements Initializable, IView{
         try {
             Stage newStage = new Stage();
             newStage.setTitle("Help");
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("Help.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Help.fxml"));
+            Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, 700, 600);
             scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
             newStage.setScene(scene);
@@ -85,7 +90,6 @@ public abstract class AView implements Initializable, IView{
                 "the maze solveMaze option is based on BFS, DFS or BestFirstSearch\n\n"+
                 "enjoy :)";
         alert.setContentText(content);
-        //alert.getDialogPane().getButtonTypes().add(ButtonType.OK);
         alert.show();
     }
 
@@ -99,18 +103,6 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void backToMain(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainView.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
-            MainViewController mainViewController = fxmlLoader.getController();
-            mainViewController.setMyViewModel(myViewModel);
-            mainViewController.setChosenChar(chosenChar);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene("MainView.fxml","MainStyle.css");
     }
 }
