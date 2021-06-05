@@ -220,7 +220,7 @@ public class MyModel extends Observable implements IModel{
             goalRow = maze.getGoalPosition().getRowIndex();
             goalCol = maze.getGoalPosition().getColumnIndex();
             setChanged();
-            notifyObservers(0);
+            notifyObservers("maze generated");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

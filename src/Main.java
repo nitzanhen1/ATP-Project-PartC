@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.net.URISyntaxException;
 
 public class Main extends Application {
@@ -25,6 +26,7 @@ public class Main extends Application {
         primaryStage.setTitle("Friends Maze");
         Scene scene = new Scene(root, 800, 600);
         scene.getStylesheets().add(getClass().getResource("View/MainStyle.css").toExternalForm());
+
         primaryStage.setScene(scene);
         primaryStage.show();
 

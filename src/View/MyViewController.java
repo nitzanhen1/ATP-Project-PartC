@@ -6,7 +6,9 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.net.URL;
 import java.util.Observable;
 import java.util.Observer;
@@ -53,11 +55,7 @@ public class MyViewController extends AView implements Observer {
         int cols =Integer.valueOf(textField_mazeColumns.getText());
 
         myViewModel.generateMaze(rows,cols);
-
-        buttonSolveMaze.setDisable(false);
-        buttonSolveMaze.setSelected(false);
-        buttonHint.setDisable(false);
-        buttonSave.setDisable(false);
+        //showButtons();
     }
 
     public void solveMaze(ActionEvent actionEvent) {
@@ -119,6 +117,7 @@ public class MyViewController extends AView implements Observer {
     }
 
     private void mazeGenerated() {
+        showButtons();
         this.maze = myViewModel.getMaze();
         drawMaze();
         this.mazeDisplayer.setGoal(myViewModel.getGoalRow(), myViewModel.getGoalCol());
@@ -208,5 +207,12 @@ public class MyViewController extends AView implements Observer {
 
     }
 
+
+    public void showButtons() {
+        buttonSolveMaze.setSelected(false);
+        buttonSolveMaze.setDisable(false);
+        buttonSave.setDisable(false);
+        buttonHint.setDisable(false);
+    }
 }
 

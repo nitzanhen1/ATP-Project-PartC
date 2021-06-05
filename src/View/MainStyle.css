@@ -11,6 +11,10 @@ BorderPane{
     -fx-background-color: antiquewhite;
 }
 
+#properties{
+    -fx-background-image: url("//resources/images/milk.jpeg");;
+}
+
 #helpAnchorPane{
     -fx-background-image: url("//resources/images/milk.jpeg");
     -fx-background-size: stretch;
@@ -110,29 +114,30 @@ Button:hover {
 }
 
 
-
 #monica:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
 
 #ross:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
 
 #rachel:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
 
 #joey:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
 
 #phoebe:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
 
 #chandler:focused{
-    -fx-background-color: #7d60c1;
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
 }
+
+
 
 
