@@ -21,11 +21,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("View/MainView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/MainView.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Friends Maze");
         Scene scene = new Scene(root, 800, 600);
-        scene.getStylesheets().add(getClass().getResource("View/MainStyle.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/MainStyle.css").toExternalForm());
 
         primaryStage.setScene(scene);
         primaryStage.show();

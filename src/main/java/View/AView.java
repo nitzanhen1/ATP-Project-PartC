@@ -6,6 +6,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -14,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.module.Configuration;
@@ -23,7 +25,11 @@ public abstract class AView implements Initializable, IView{
     protected MyViewModel myViewModel;
     protected static Stage stage;
     private String chosenChar="monica";
+    public ChoiceBox generate;
+    public ChoiceBox solve;
     public TextField threadsNum;
+
+    
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
@@ -58,7 +64,7 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void newGame(ActionEvent actionEvent) {
-        changeScene("MyView.fxml","MyStyle.css");
+        changeScene("/MyView.fxml","/MyStyle.css");
     }
 
     public void saveGame(ActionEvent actionEvent) {
@@ -106,10 +112,10 @@ public abstract class AView implements Initializable, IView{
         try {
             Stage newStage = new Stage();
             newStage.setTitle("Properties");
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Properties.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Properties.fxml"));
             Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, 600, 600);
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            Scene scene = new Scene(root, 400, 300);
+            scene.getStylesheets().add(getClass().getResource("/MainStyle.css").toExternalForm());
             newStage.setScene(scene);
             newStage.show();
         } catch (IOException e) {
@@ -121,10 +127,10 @@ public abstract class AView implements Initializable, IView{
         try {
             Stage newStage = new Stage();
             newStage.setTitle("Help");
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Help.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Help.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, 700, 600);
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/MainStyle.css").toExternalForm());
             newStage.setScene(scene);
             newStage.show();
         } catch (IOException e) {
@@ -160,23 +166,31 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void backToMain(ActionEvent actionEvent) {
-        changeScene("MainView.fxml","MainStyle.css");
+        changeScene("/MainView.fxml","/MainStyle.css");
     }
-
-    public void chooseNumberOfThreads(KeyEvent keyEvent) {
-        //check if int
-        int num = Integer.valueOf(threadsNum.getText());
-        System.out.println(num);
-    }
-
-    public void chooseGenerateAlgorithm(ActionEvent actionEvent) {
-        Configurations.getInstance();
-        Configurations.setMazeGeneratingAlgorithm(((ChoiceBox)actionEvent.getSource()).getValue().toString());
-    }
-
-    public void chooseSolveAlgorithm(ActionEvent actionEvent) {
-        Configurations.getInstance();
-        Configurations.setMazeSearchingAlgorithm(((ChoiceBox)actionEvent.getSource()).getValue().toString());
+    
+    public void saveConfigurations(ActionEvent actionEvent) {
+        int num;
+        if(threadsNum.getText()!="") {
+            try{
+                num = Integer.valueOf(threadsNum.getText());
+                if(num>0)
+                    Configurations.setThreadPoolSize(num);
+                else
+                    throw new NumberFormatException();
+            }
+            catch (NumberFormatException e){
+                showAlert("Illegal input", "must insert positive number for num of threads");
+                return;
+            }
+        }
+        if(generate.getValue()!=null)
+            Configurations.setMazeGeneratingAlgorithm(generate.getValue().toString());
+        if(solve.getValue()!=null)
+            Configurations.setMazeSearchingAlgorithm(solve.getValue().toString());
+        Node source = (Node)  actionEvent.getSource();
+        Stage stage  = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 
 

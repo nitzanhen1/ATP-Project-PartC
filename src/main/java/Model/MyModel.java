@@ -7,6 +7,8 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.search.AState;
 import algorithms.search.MazeState;
 import algorithms.search.Solution;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -26,12 +28,15 @@ public class MyModel extends Observable implements IModel{
     private int playerCol;
     private int goalRow;
     private int goalCol;
+    private final Logger LOG= LogManager.getLogger();
 
     public MyModel() {
         generateMazeServer = new Server(5400,1000,new ServerStrategyGenerateMaze());
         solveMazeServer = new Server(5401,1000,new ServerStrategySolveSearchProblem());
         generateMazeServer.start();
+        LOG.info("Generate server started at port 5400, can except clients");
         solveMazeServer.start();
+        LOG.info("Solver server started at port 5401, can except clients");
     }
 
     public int[][] getMaze() {return maze.getMaze(); }
@@ -63,10 +68,16 @@ public class MyModel extends Observable implements IModel{
     public int getGoalCol() {return goalCol; }
 
     public void generateMaze(int row, int col){
+        if(row<2 || col<2) {
+            LOG.error("maze sizes are invalid, min size of maze is 2x2");
+            throw new IllegalArgumentException();
+        }
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5400, new IClientStrategy() {
                 public void clientStrategy(InputStream inFromServer, OutputStream outToServer) {
                     try {
+                        LOG.info("client connected to server - IP = " + InetAddress.getLocalHost() + ", Port = " + 5400);
+                        LOG.info("client ask to generate maze with size " + row+"X"+col);
                         ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                         ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                         toServer.flush();
@@ -80,14 +91,18 @@ public class MyModel extends Observable implements IModel{
                         is.read(decompressedMaze); //Fill decompressedMaze with bytes
                         maze = new Maze(decompressedMaze);
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    }
+                    catch (IOException e) {
+                        LOG.error("IOException",e);
+
+                    } catch (ClassNotFoundException e) {
+                        LOG.error("ClassNotFoundException",e);
                     }
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            LOG.error("UnknownHostException",e);
         }
         playerRow=maze.getStartPosition().getRowIndex();
         playerCol=maze.getStartPosition().getColumnIndex();
@@ -116,6 +131,8 @@ public class MyModel extends Observable implements IModel{
                 @Override
                 public void clientStrategy(InputStream inFromServer,OutputStream outToServer) {
                     try {
+                        LOG.info("client connected to server - IP = " + InetAddress.getLocalHost() + ", Port = " + 5401);
+                        LOG.info("client ask to solve maze with algorithm "+Configurations.getMazeSearchingAlgorithm());
                         ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                         ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                         toServer.flush();
@@ -123,14 +140,15 @@ public class MyModel extends Observable implements IModel{
                         toServer.writeObject(maze); //send maze to server
                         toServer.flush();
                         solution = (Solution)fromServer.readObject();
+                        LOG.info("solution found, length of solution is " + solution.getSolutionPath().size());
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        LOG.error("Exception",e);
                     }
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            LOG.error("UnknownHostException",e);
         }
     }
 
@@ -200,9 +218,9 @@ public class MyModel extends Observable implements IModel{
             objectOutput.close();
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOG.error("FileNotFoundException",e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("IOException",e);
         }
     }
 
@@ -222,11 +240,11 @@ public class MyModel extends Observable implements IModel{
             setChanged();
             notifyObservers("maze generated");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOG.error("FileNotFoundException",e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("IOException",e);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOG.error("ClassNotFoundException",e);
         }
     }
 

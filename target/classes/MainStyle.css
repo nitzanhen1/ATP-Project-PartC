@@ -1,0 +1,143 @@
+.root{
+    -fx-background-color: white;
+}
+
+BorderPane{
+    -fx-background-image: url("//resources/images/open8.jpg");
+    -fx-background-size: stretch;
+}
+
+#GridChoose{
+    -fx-background-color: antiquewhite;
+}
+
+#properties{
+    -fx-background-image: url("//resources/images/milk.jpeg");;
+}
+
+#helpAnchorPane{
+    -fx-background-image: url("//resources/images/milk.jpeg");
+    -fx-background-size: stretch;
+}
+
+#chooseBackground{
+    -fx-background-image: url("//resources/images/backgroundChoose.jpeg");
+    -fx-background-size: stretch;
+}
+
+ImageView{
+    -fx-image: url("//resources/images/f2.png");
+}
+
+#rachelImage{
+    -fx-image: url("//resources/images/charMenu/rachel1.gif");
+    -fx-background-color: green;
+}
+#monicaImage{
+    -fx-image: url("//resources/images/charMenu/monica3.gif");
+    -fx-background-color: green;
+}
+
+#phoebeImage{
+    -fx-image: url("//resources/images/charMenu/p5.gif");
+    -fx-background-color: green;
+}
+#chandlerImage{
+    -fx-image: url("//resources/images/charMenu/chandler2.gif");
+    -fx-background-color: green;
+}
+
+#joeyImage{
+    -fx-image: url("//resources/images/charMenu/j1.gif");
+    -fx-background-color: green;
+}
+#rossImage{
+    -fx-image: url("//resources/images/charMenu/ross4.gif");
+    -fx-background-color: green;
+}
+TextArea{
+    -fx-alignment: center;
+    -fx-text-fill: Black;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+}
+Text{
+    -fx-font-size: 18;
+    -fx-text-fill: Black;
+    -fx-font-family: "Arial";
+}
+#pivot, #enjoy{
+    -fx-font-size: 18;
+    -fx-text-fill: Black;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold italic;
+}
+
+#instructions{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold italic;
+    -fx-underline: true;
+    -fx-font-size: 26;
+}
+
+#welcome, #chooseLabel{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold italic;
+    -fx-font-size: 26;
+}
+
+
+
+Button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold italic;
+    -fx-font-size: 22;
+    -fx-background-color: linear-gradient(#d8c495,#d8a52a);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+#buttonBack, #buttonPlay {
+    -fx-font-size: 16;
+}
+
+Button:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+
+#monica:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+#ross:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+#rachel:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+#joey:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+#phoebe:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+#chandler:focused{
+    -fx-background-color: linear-gradient(#be95d8,#7d60c1);
+}
+
+
+
+

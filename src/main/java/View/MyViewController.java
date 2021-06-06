@@ -1,5 +1,6 @@
 package View;
 
+import Server.Configurations;
 import ViewModel.MyViewModel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -51,11 +52,17 @@ public class MyViewController extends AView implements Observer {
     }
 
     public void generateMaze(ActionEvent actionEvent) {
-        int rows =Integer.valueOf(textField_mazeRows.getText());
-        int cols =Integer.valueOf(textField_mazeColumns.getText());
-
-        myViewModel.generateMaze(rows,cols);
-        //showButtons();
+        try {
+            int rows = Integer.valueOf(textField_mazeRows.getText());
+            int cols = Integer.valueOf(textField_mazeColumns.getText());
+            myViewModel.generateMaze(rows,cols);
+        }
+        catch (NumberFormatException e){
+            showAlert("Illegal input", "must insert positive numbers for maze row and column sizes");
+        }
+        catch (IllegalArgumentException e){
+            showAlert("Illegal input", "min size of maze is 2X2");
+        }
     }
 
     public void solveMaze(ActionEvent actionEvent) {

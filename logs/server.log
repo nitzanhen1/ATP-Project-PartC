@@ -1,0 +1,90 @@
+2021.06.06 17:36:52.477 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:36:52.489 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 17:38:17.536 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:38:17.540 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 17:39:18.563 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:39:18.569 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 17:40:37.654 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:40:37.658 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 17:41:26.447 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:41:26.453 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 17:42:05.169 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 17:42:05.174 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:00:27.182 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:00:27.189 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:02:38.707 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:02:38.713 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:04:32.380 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:04:32.385 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:07:38.298 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:07:38.304 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:15:55.753 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:15:55.758 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:19:45.475 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:19:45.481 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:22:34.593 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:22:34.598 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:25:24.388 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:25:24.397 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:26:03.375 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:26:03.382 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:28:35.277 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:28:35.283 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:32:50.302 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:32:50.309 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:34:25.692 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:34:25.700 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:34:45.551 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:34:45.557 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:40:49.793 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:40:49.799 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:43:09.880 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:43:09.886 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:48:57.370 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:48:57.378 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 18:52:59.222 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 18:52:59.228 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:05:26.911 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:05:26.917 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:06:58.441 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:06:58.446 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:10:00.232 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:10:00.237 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:10:52.282 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:10:52.285 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:17:23.134 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:17:23.141 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 19:58:51.250 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 19:58:51.256 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 20:01:33.750 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 20:01:33.754 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 20:01:42.295 ERROR Model.MyModel - maze sizes are invalid, min size of maze is 2x2
+2021.06.06 20:04:16.241 INFO  Model.MyModel - Generate server started, can except clients
+2021.06.06 20:04:16.249 INFO  Model.MyModel - Solver server started, can except clients
+2021.06.06 20:24:53.690 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:24:53.696 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.06 20:24:58.574 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.06 20:24:58.577 INFO  Model.MyModel - client ask for generate maze in size 10X10
+2021.06.06 20:28:58.965 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:28:58.970 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.06 20:29:02.507 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.06 20:29:02.511 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.06 20:29:08.075 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5401
+2021.06.06 20:29:08.077 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@5e0fb722
+2021.06.06 20:29:08.106 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.06 20:29:22.912 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:29:22.917 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.06 20:29:27.209 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.06 20:29:27.212 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.06 20:29:28.310 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5401
+2021.06.06 20:29:28.311 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@7a169c0c
+2021.06.06 20:29:28.345 INFO  Model.MyModel - solution found, length of solution is 15
+2021.06.06 20:29:57.748 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:29:57.754 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.06 20:30:07.098 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.06 20:30:07.102 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.06 20:30:07.976 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5401
+2021.06.06 20:30:07.977 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@69a0440a
+2021.06.06 20:30:08.005 INFO  Model.MyModel - solution found, length of solution is 10
+2021.06.06 20:49:02.305 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:49:02.309 INFO  Model.MyModel - Solver server started at port 5401, can except clients

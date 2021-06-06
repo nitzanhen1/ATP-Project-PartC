@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="helpAnchorPane" prefHeight="534.0" prefWidth="641.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
+   <children>
+      <Pane prefHeight="534.0" prefWidth="662.0">
+         <children>
+            <GridPane layoutX="424.0" layoutY="170.0" prefHeight="168.0" prefWidth="224.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="your &#10;character" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="7&#10;up left" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="8&#10;up" GridPane.columnIndex="1" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="9&#10;up right" GridPane.columnIndex="2" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="4&#10;left" GridPane.rowIndex="1" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="6&#10;right" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="1&#10;down left" GridPane.rowIndex="2" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="2&#10;down" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="3&#10;down right" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Label fx:id="instructions" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="360.0" text="Game Instructions" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" />
+            <Text layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help Friends navigate through the maze and reach the couch." wrappingWidth="580.8033447265625"/>
+            <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can choose which of the characters will go on the mission !!" wrappingWidth="551.8717956542969"/>
+            <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start a new game press play or go to File-&gt;New" wrappingWidth="551.8717956542969"/>
+            <Text layoutX="14.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To navigate your character use your keyboard NumPad as shown below: " wrappingWidth="600.0"/>
+            <Text layoutX="14.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you get stuck, you can always ask for a Hint" wrappingWidth="551.8717956542969"/>
+            <Text layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remember, you cannot step on the coffee cups !" wrappingWidth="600.0"/>
+            <Text layoutX="14.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="still stuck? you can ask for a full solution ;)" wrappingWidth="551.8717956542969"/>
+            <Text fx:id="enjoy" layoutX="14.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Good Luck and enjoy our Game.."  wrappingWidth="305.20513916015625"/>
+            <Text fx:id="pivot" layoutX="133.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and don't forget to PIVOT!!!" wrappingWidth="240.5384521484375"/>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
