@@ -31,25 +31,20 @@ public class MainViewController extends AView{
     public javafx.scene.control.Button character;
 
 
+    Media openSong = new Media(getClass().getResource("../music/openSong.mp3").toExternalForm());
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        if(!alreadyPlay) {
+            setMusic(openSong);
+           alreadyPlay=true;
+        }
     }
 
     public void characterButton(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CharactersView.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, 800, 600);
-            scene.getStylesheets().add(getClass().getResource("MainStyle.css").toExternalForm());
-            MainViewController mainViewController = fxmlLoader.getController();
-            mainViewController.setMyViewModel(myViewModel);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(stage,"/CharactersView.fxml","/MainStyle.css",stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
     }
+
 
     public void chooseChar(MouseEvent mouseEvent) {
         character = (Button)mouseEvent.getSource();

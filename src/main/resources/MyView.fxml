@@ -51,7 +51,7 @@
                   <font>
                      <Font name="System Bold Italic" size="16.0" />
                   </font></RadioButton>
-                    <RadioButton mnemonicParsing="false" onAction="#muteUnmute" text="Mute" textFill="WHITE" GridPane.rowIndex="8">
+                    <RadioButton fx:id="muteButton" mnemonicParsing="false" onAction="#muteUnmute" text="Mute" textFill="WHITE" GridPane.rowIndex="8">
                   <font>
                      <Font name="System Bold" size="16.0" />
                   </font></RadioButton>
@@ -127,7 +127,7 @@
         <ScrollPane fx:id="scrollPane" BorderPane.alignment="CENTER">
             <content>
                 <Group>
-                    <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch5.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee1.png" onKeyPressed="#keyPressed" onZoom="#zoomIn" onMouseClicked="#updateCoordinates" onMouseDragged="#dragCharacter" width="400.0" />
+                    <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee.png" onKeyPressed="#keyPressed" onScroll="#zoom" onMouseClicked="#updateCoordinates" onMouseDragged="#dragCharacter" width="400.0" />
                 </Group>
             </content>
         </ScrollPane>

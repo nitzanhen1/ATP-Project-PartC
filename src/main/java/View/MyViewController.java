@@ -7,7 +7,9 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
+import javafx.scene.media.Media;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
@@ -26,11 +28,16 @@ public class MyViewController extends AView implements Observer {
     public RadioButton buttonSolveMaze;
     public MenuItem buttonSave;
     public ScrollPane scrollPane;
+    public RadioButton muteButton;
     private int [][] maze;
+
+    Media mazeSong = new Media(getClass().getResource("../music/mazeSong.mp3").toExternalForm());
+    Media winSong = new Media(getClass().getResource("../music/winSong.mp3").toExternalForm());
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
     private boolean flagPlayer=false;
+    private double zoom=1;
 
     public void setUpdatePlayerRow(int row) { this.updatePlayerRow.set("" + row); }
     public void setUpdatePlayerCol(int col) {
@@ -43,6 +50,9 @@ public class MyViewController extends AView implements Observer {
         lbl_PlayerCol.textProperty().bind(updatePlayerCol);
         stage.widthProperty().addListener(event -> drawMaze());
         stage.heightProperty().addListener(event -> drawMaze());
+        setMusic(mazeSong);
+        if(!musicState)
+            muteButton.setSelected(true);
     }
 
     @Override
@@ -56,13 +66,16 @@ public class MyViewController extends AView implements Observer {
             int rows = Integer.valueOf(textField_mazeRows.getText());
             int cols = Integer.valueOf(textField_mazeColumns.getText());
             myViewModel.generateMaze(rows,cols);
+            zoom=1;
         }
         catch (NumberFormatException e){
-            showAlert("Illegal input", "must insert positive numbers for maze row and column sizes");
+            showAlert(Alert.AlertType.WARNING,"Illegal input", "must insert positive numbers for maze row and column sizes");
         }
         catch (IllegalArgumentException e){
-            showAlert("Illegal input", "min size of maze is 2X2");
+            showAlert(Alert.AlertType.WARNING,"Illegal input", "min size of maze is 2X2");
         }
+
+        mazeDisplayer.requestFocus();
     }
 
     public void solveMaze(ActionEvent actionEvent) {
@@ -71,20 +84,27 @@ public class MyViewController extends AView implements Observer {
             myViewModel.solveMaze();
         else
             drawMaze();
-    }
-
-    public void keyPressed(KeyEvent keyEvent){
-        myViewModel.movePlayer(keyEvent);
-        keyEvent.consume();
-    }
-
-    public void mouseClicked(MouseEvent mouseEvent){
         mazeDisplayer.requestFocus();
     }
 
     public void getHint(ActionEvent actionEvent) {
         myViewModel.setHint();
         buttonSolveMaze.setSelected(false);
+        mazeDisplayer.requestFocus();
+    }
+
+    private void drawMaze(){
+        mazeDisplayer.setWidth(zoom*stage.getWidth()/1.5);
+        mazeDisplayer.setHeight(zoom*stage.getHeight()/1.5);
+        mazeDisplayer.drawMaze(maze);
+        if(buttonSolveMaze.selectedProperty().getValue())
+            mazeDisplayer.drawSolution(myViewModel.getSolution());
+    }
+
+    private void setPlayerPosition(int row, int col){
+        mazeDisplayer.setPosition(row,col);
+        setUpdatePlayerRow(row);
+        setUpdatePlayerCol(col);
     }
 
     @Override
@@ -100,13 +120,39 @@ public class MyViewController extends AView implements Observer {
         super.exit();
     }
 
-    private void drawMaze(){
-        mazeDisplayer.setWidth(stage.getWidth()/1.5);
-        mazeDisplayer.setHeight(stage.getHeight()/1.5);
-        mazeDisplayer.drawMaze(maze);
-        if(buttonSolveMaze.selectedProperty().getValue())
-            mazeDisplayer.drawSolution(myViewModel.getSolution());
+    public void keyPressed(KeyEvent keyEvent){
+        myViewModel.movePlayer(keyEvent);
+        keyEvent.consume();
+    }
 
+    public void mouseClicked(MouseEvent mouseEvent){
+        mazeDisplayer.requestFocus();
+    }
+
+    public void zoom(ScrollEvent scrollEvent) {
+        if(maze==null)
+            return;
+        if(scrollEvent.isControlDown()) {
+            double zoomFactor =1.05;
+            double mazeWidth=mazeDisplayer.getWidth();
+            double mazeHeight=mazeDisplayer.getHeight();
+            if(scrollEvent.getDeltaY()<0){
+                zoomFactor=0.95;
+            }
+            System.out.println(zoom);
+            if(mazeWidth*mazeHeight>5000000 && zoomFactor==1.05)
+                return;
+            zoom*=zoomFactor;
+            mazeDisplayer.setWidth(mazeWidth* zoomFactor);
+            mazeDisplayer.setHeight(mazeHeight * zoomFactor);
+            System.out.println(mazeDisplayer.getWidth());
+            System.out.println(mazeDisplayer.getHeight());
+            mazeDisplayer.drawMaze(maze);
+            if(buttonSolveMaze.selectedProperty().getValue())
+                mazeDisplayer.drawSolution(myViewModel.getSolution());
+
+        }
+        scrollEvent.consume();
     }
 
     @Override
@@ -135,7 +181,6 @@ public class MyViewController extends AView implements Observer {
     private void mazeSolved() {
         int[][] solution = myViewModel.getSolution();
         mazeDisplayer.drawSolution(solution);
-
     }
 
     private void hintGenerated() {
@@ -149,23 +194,16 @@ public class MyViewController extends AView implements Observer {
         if(buttonSolveMaze.selectedProperty().getValue())
             myViewModel.solveMaze();
     }
-    private void setPlayerPosition(int row, int col){
-        mazeDisplayer.setPosition(row,col);
-        setUpdatePlayerRow(row);
-        setUpdatePlayerCol(col);
-    }
+
 
     private void goalReached() {
         //play winning music
         //information about winning
+        setMusic(winSong);
+        showAlert(Alert.AlertType.INFORMATION,"winner!!!","Congratulations, you won!\n"+getChosenChar()+" has reached the couch!!");
     }
 
-    public void zoomIn(ZoomEvent zoomEvent) {
-        double zoomFactor =zoomEvent.getZoomFactor();
-        mazeDisplayer.setScaleX(mazeDisplayer.getScaleX()*zoomFactor);
-        mazeDisplayer.setScaleY(mazeDisplayer.getScaleY()*zoomFactor);
-        zoomEvent.consume();
-    }
+
 
     public void updateCoordinates(MouseEvent mouseEvent) {
 

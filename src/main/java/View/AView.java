@@ -12,8 +12,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.swing.*;
 import java.io.File;
@@ -28,8 +31,31 @@ public abstract class AView implements Initializable, IView{
     public ChoiceBox generate;
     public ChoiceBox solve;
     public TextField threadsNum;
+    protected static MediaPlayer player;
+    static boolean alreadyPlay=false;
+    protected static boolean musicState=true;
+
 
     
+    public void setMusic(Media song){
+        //if(true)
+        //    return;
+        if(player!=null)
+            player.pause();
+        player = new MediaPlayer(song);
+        playMusic();
+    }
+
+    public void playMusic(){
+        //player.play();
+        player.setAutoPlay(musicState);
+        player.setVolume(0.4);
+        player.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                player.seek(Duration.ZERO);
+            }
+        });
+    }
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
@@ -39,15 +65,20 @@ public abstract class AView implements Initializable, IView{
         this.chosenChar = chosenChar;
     }
 
+    public String getChosenChar() {
+        return chosenChar;
+    }
+
+
     public void setMyViewModel(MyViewModel myViewModel) {
         this.myViewModel = myViewModel;
     }
 
-    protected void changeScene(String fxmlName, String cssName){
+    protected void changeScene(Stage stage, String fxmlName, String cssName, double width, double height){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlName));
             Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
+            Scene scene = new Scene(root, width, height);
             scene.getStylesheets().add(getClass().getResource(cssName).toExternalForm());
 
             AView viewController = fxmlLoader.getController();
@@ -64,7 +95,7 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void newGame(ActionEvent actionEvent) {
-        changeScene("/MyView.fxml","/MyStyle.css");
+        changeScene(stage,"/MyView.fxml","/MyStyle.css", stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
     }
 
     public void saveGame(ActionEvent actionEvent) {
@@ -72,10 +103,6 @@ public abstract class AView implements Initializable, IView{
          * save maze to a file
          * we use the a file choose and the player choose the location and the name of the maze
          */
-//        if(myViewModel.getMaze()==null) {
-//            showAlert("Please generate a maze before saving.");
-//        }
-//        else{
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Maze");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("maze", "*.maze"));
@@ -83,10 +110,7 @@ public abstract class AView implements Initializable, IView{
 
         if (savedFile != null) {
             myViewModel.saveMaze(savedFile);
-            showAlert("action success", "Maze: " + savedFile.getName()+" has been saved.");
-        }
-        else {//not sure if needed
-            showAlert("action canceled", "Maze saving was canceled");
+            showAlert(Alert.AlertType.INFORMATION,"saved successfully", "Maze: " + savedFile.getName()+" has been saved.");
         }
     }
 
@@ -99,44 +123,20 @@ public abstract class AView implements Initializable, IView{
         fileChooser.setTitle("Load Maze");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("maze", "*.maze"));
         File file= fileChooser.showOpenDialog(stage);
-        if(file==null) //not sure if needed , on cancel show this alert
-        {
-            showAlert("action canceled", "Maze loading canceled");
-            return;
-        }
         newGame(actionEvent);
         this.myViewModel.loadMaze(file);
     }
 
     public void properties(ActionEvent actionEvent) {
-        try {
             Stage newStage = new Stage();
             newStage.setTitle("Properties");
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Properties.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, 400, 300);
-            scene.getStylesheets().add(getClass().getResource("/MainStyle.css").toExternalForm());
-            newStage.setScene(scene);
-            newStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            changeScene(newStage,"/Properties.fxml","/MainStyle.css",400,300);
     }
 
     public void help(MouseEvent mouseEvent) {
-        try {
             Stage newStage = new Stage();
             newStage.setTitle("Help");
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Help.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root, 700, 600);
-            scene.getStylesheets().add(getClass().getResource("/MainStyle.css").toExternalForm());
-            newStage.setScene(scene);
-            newStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+            changeScene(newStage,"/Help.fxml","/MainStyle.css",700,600);
     }
 
     public void about(MouseEvent mouseEvent) {
@@ -145,7 +145,7 @@ public abstract class AView implements Initializable, IView{
                 "the maze is generated based on prim's algorithm \n\n" +
                 "the maze solveMaze option is based on BFS, DFS or BestFirstSearch\n\n"+
                 "enjoy :)";
-        showAlert("about",content);
+        showAlert(Alert.AlertType.INFORMATION,"about",content);
     }
 
     public void exit() {
@@ -154,19 +154,25 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void muteUnmute(ActionEvent actionEvent) {
-
+        if(musicState)
+            player.pause();
+        else
+            player.play();
+        musicState=!musicState;
     }
 
-    public void showAlert(String title, String message)
+    public void showAlert(Alert.AlertType type,String title, String message)
     {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(type);
         alert.setTitle(title);
         alert.setContentText(message);
         alert.show();
     }
 
     public void backToMain(ActionEvent actionEvent) {
-        changeScene("/MainView.fxml","/MainStyle.css");
+        if(stage.getScene().getStylesheets().get(0).contains("MyStyle"))
+            alreadyPlay=false;
+        changeScene(stage,"/MainView.fxml","/MainStyle.css",stage.getScene().widthProperty().getValue(), stage.getScene().heightProperty().getValue());
     }
     
     public void saveConfigurations(ActionEvent actionEvent) {
@@ -180,7 +186,7 @@ public abstract class AView implements Initializable, IView{
                     throw new NumberFormatException();
             }
             catch (NumberFormatException e){
-                showAlert("Illegal input", "must insert positive number for num of threads");
+                showAlert(Alert.AlertType.WARNING, "Illegal input", "must insert positive number for num of threads");
                 return;
             }
         }

@@ -194,8 +194,10 @@ public class MyModel extends Observable implements IModel{
         }
         setChanged();
         notifyObservers("player moved");
-        if(playerRow==goalRow && playerCol==goalCol)
+        if(playerRow==goalRow && playerCol==goalCol) {
+            setChanged();
             notifyObservers("goal reached");
+        }
     }
 
     public void exit(){
