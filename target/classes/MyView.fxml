@@ -127,7 +127,7 @@
         <ScrollPane fx:id="scrollPane" BorderPane.alignment="CENTER">
             <content>
                 <Group>
-                    <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee.png" onKeyPressed="#keyPressed" onScroll="#zoom" onMouseClicked="#updateCoordinates" onMouseDragged="#dragCharacter" width="400.0" />
+                    <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee.png" onKeyPressed="#keyPressed" onScroll="#zoom" onMousePressed="#startDrag" onMouseReleased="#stopDrag" onMouseDragged="#dragCharacter" width="400.0" />
                 </Group>
             </content>
         </ScrollPane>

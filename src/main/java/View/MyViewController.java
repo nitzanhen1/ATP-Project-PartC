@@ -203,54 +203,34 @@ public class MyViewController extends AView implements Observer {
         showAlert(Alert.AlertType.INFORMATION,"winner!!!","Congratulations, you won!\n"+getChosenChar()+" has reached the couch!!");
     }
 
-
-
-    public void updateCoordinates(MouseEvent mouseEvent) {
-
-        //myViewModel.MouseMove()
-        double mouseCol = mouseEvent.getX();
-        double mouseRow = mouseEvent.getY();
-        double cellWidth = mazeDisplayer.getCellWidth();
-        double cellHeight = mazeDisplayer.getCellHeight();
-        double playerLeftBound = cellWidth * mazeDisplayer.getPlayerRow();
-        double playerUpBound = cellHeight * mazeDisplayer.getPlayerCol();
-        double playerRightBound = cellWidth + playerLeftBound;
-        double playerDownBound = cellHeight + playerUpBound;
-        if (playerLeftBound <= mouseCol && mouseCol <= playerRightBound && playerUpBound <= mouseRow && mouseRow <= playerDownBound) {
-            flagPlayer = true;
-
-        }
+    public void startDrag(MouseEvent e){
+        double mouseCol = e.getX();
+        double mouseRow = e.getY();
+        int playerRow = (int)(mouseRow/mazeDisplayer.getCellHeight());
+        int playerCol = (int)(mouseCol/mazeDisplayer.getCellWidth());
+        if(mazeDisplayer.getPlayerRow()==playerRow&&mazeDisplayer.getPlayerCol()==playerCol)
+            flagPlayer=true;
     }
-    public void dragCharacter(MouseEvent mouseEvent) {
+    public void dragCharacter(MouseEvent e){
         if(!flagPlayer)
             return;
-        System.out.println("true");
-        double mouseCol =  mouseEvent.getX();
-        double mouseRow = mouseEvent.getY();
-        double cellWidth = mazeDisplayer.getCellWidth();
-        double cellHeight = mazeDisplayer.getCellHeight();
-        double playerLeftBound = cellWidth*mazeDisplayer.getPlayerRow();
-        double playerUpBound = cellHeight*mazeDisplayer.getPlayerCol();
-        double playerRightBound = cellWidth+playerLeftBound;
-        double playerDownBound = cellHeight+playerUpBound;
-        setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol());
-        if(mouseCol<playerLeftBound && mouseCol>= playerLeftBound-cellWidth){
-            if(mouseRow<playerUpBound && mouseRow >= playerUpBound-cellHeight) {
-                setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol() - 1);
-                System.out.println("UPLEFT");
-            }
-            else {
-                setPlayerPosition(mazeDisplayer.getPlayerRow() - 1, mazeDisplayer.getPlayerCol());
-                System.out.println("UP");
-            }
+        double mouseCol =  e.getX();
+        double mouseRow = e.getY();
+        int playerRow = (int)(mouseRow/mazeDisplayer.getCellHeight());
+        int playerCol = (int)(mouseCol/mazeDisplayer.getCellWidth());
+        int diffRow=Math.abs(mazeDisplayer.getPlayerRow()-playerRow);
+        int diffCol = Math.abs(mazeDisplayer.getPlayerCol()-playerCol);
+        if(diffRow<=1&&diffCol<=1&&(diffRow!=0||diffCol!=0)){
+            myViewModel.movePlayerMouse(playerRow,playerCol);
         }
-        mouseEvent.consume();
 
-//        System.out.println("mouse: "+ mouseCol+" "+mouseRow);
-//        System.out.println("point1: "+playerLeftBound+" "+playerUpBound);
-//        System.out.println("point2: "+playerRightBound+" "+playerDownBound);
-
+        e.consume();
     }
+
+    public void stopDrag(MouseEvent mouseEvent) {
+        flagPlayer=false;
+    }
+
 
 
     public void showButtons() {

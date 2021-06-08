@@ -23,6 +23,7 @@ public interface IModel {
     void solveMaze();
     void setHint();
     void updatePlayerPosition(Model.MovementDirection direction);
+    void updatePlayerPositionMouse(int row, int col);
     void exit();
     void saveMaze(File file);
     void loadMaze(File file);

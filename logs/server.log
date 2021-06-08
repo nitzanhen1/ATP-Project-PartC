@@ -88,3 +88,365 @@
 2021.06.06 20:30:08.005 INFO  Model.MyModel - solution found, length of solution is 10
 2021.06.06 20:49:02.305 INFO  Model.MyModel - Generate server started at port 5400, can except clients
 2021.06.06 20:49:02.309 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.06 20:56:02.301 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.06 20:56:02.309 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 12:52:32.802 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 12:52:32.805 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:51:01.456 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 17:51:01.459 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:51:07.380 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 17:51:07.384 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 17:53:36.847 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 17:53:36.850 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:53:39.748 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.0.103, Port = 5400
+2021.06.07 17:53:39.754 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 17:54:35.779 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 17:54:35.783 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:54:38.529 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 17:54:38.532 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 17:55:11.131 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 17:55:11.134 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:55:14.980 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 17:55:14.984 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 17:55:20.441 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 17:55:20.441 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 17:55:36.936 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 17:55:36.940 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 17:55:40.028 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 17:55:40.032 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:07:34.260 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:07:34.265 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:07:36.818 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:07:36.820 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:08:00.331 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:08:00.331 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 18:09:02.156 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:09:02.159 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:09:04.823 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:09:04.826 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:09:58.183 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:09:58.186 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:10:01.128 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:10:01.131 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:10:26.984 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:10:26.987 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:10:29.272 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:10:29.274 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:10:35.906 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:10:35.906 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 18:10:53.943 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:10:53.946 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:10:56.661 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:10:56.664 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:10:59.644 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:10:59.645 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 18:11:36.062 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:11:36.065 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:11:45.105 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:11:45.110 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:11:47.273 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:11:47.273 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 18:12:23.443 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:12:23.447 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:12:28.691 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.0.103, Port = 5400
+2021.06.07 18:12:28.695 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:13:17.468 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:13:17.472 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:13:19.769 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:13:19.771 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:13:59.526 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:13:59.528 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:14:02.216 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:14:02.221 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:17:30.220 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:17:30.224 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:17:33.214 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:17:33.217 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:18:16.692 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:18:16.695 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:18:18.904 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:18:18.906 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:18:57.158 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:18:57.161 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 18:18:59.488 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 18:18:59.491 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 18:31:41.607 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 18:31:41.610 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:05:18.355 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:05:18.360 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:05:21.774 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:05:21.777 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:27:45.317 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:27:45.320 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:27:47.961 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:27:47.965 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:28:17.636 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:28:17.640 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:28:21.095 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:28:21.098 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:30:49.838 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:30:49.841 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:30:52.710 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:30:52.713 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:31:15.573 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:31:15.576 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:31:18.223 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:31:18.226 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:31:56.938 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:31:56.942 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:32:27.226 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:32:27.229 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:33:05.047 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:33:05.050 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:33:07.847 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:33:07.850 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:34:59.505 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:34:59.509 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:35:02.879 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:35:02.883 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:38:47.039 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:38:47.045 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:38:52.139 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:38:52.143 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:39:31.141 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:39:31.145 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:39:34.230 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:39:34.233 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:39:59.452 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:39:59.454 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:40:09.778 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:40:09.779 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:41:13.818 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:41:13.822 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:41:20.336 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:41:20.340 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:41:23.863 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:41:23.863 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:43:44.605 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:43:44.609 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:43:55.893 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:43:55.896 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:44:01.496 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:44:01.497 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:44:04.694 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:44:04.695 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:44:13.934 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:44:13.935 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:46:20.855 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:46:20.861 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:46:24.736 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:46:24.740 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:46:31.401 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:46:31.402 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:46:36.139 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:46:36.140 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:46:42.111 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:46:42.112 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:47:36.463 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:47:36.467 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:47:43.905 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:47:43.907 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:48:21.639 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:48:21.642 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:48:24.854 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:48:24.858 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:51:25.430 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:51:25.434 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:51:28.746 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:51:28.749 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:52:13.150 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:52:13.153 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:52:15.709 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:52:15.712 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:52:42.228 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:52:42.232 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:52:44.908 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 22:52:44.911 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:58:23.337 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:58:23.341 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:58:26.465 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:58:26.468 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 22:58:38.589 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:58:38.590 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:58:40.508 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:58:40.509 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:58:48.650 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:58:48.650 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 22:59:38.038 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:59:38.045 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:59:49.395 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 22:59:49.398 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 22:59:53.358 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 22:59:53.363 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 23:00:22.080 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 23:00:22.082 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 23:00:27.903 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 23:00:27.903 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 23:01:03.765 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 23:01:03.768 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 23:01:06.569 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 23:01:06.573 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:01:09.680 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5401
+2021.06.07 23:01:09.681 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@355ebf51
+2021.06.07 23:01:09.704 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.07 23:01:10.013 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5401
+2021.06.07 23:01:10.014 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@3fc19290
+2021.06.07 23:01:10.027 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.07 23:01:10.635 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.18, Port = 5400
+2021.06.07 23:01:10.635 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 23:01:47.654 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:01:47.655 INFO  Model.MyModel - client ask to generate maze with size 500X500
+2021.06.07 23:02:20.840 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:02:20.841 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:02:22.856 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:02:22.856 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:02:40.211 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:02:40.213 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:03:16.931 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 23:03:16.934 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 23:03:19.966 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:03:19.970 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:03:34.173 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:03:34.174 INFO  Model.MyModel - client ask to generate maze with size 1000X1000
+2021.06.07 23:04:38.822 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 23:04:38.835 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 23:04:41.809 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:04:41.813 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:04:58.491 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:04:58.492 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.07 23:05:23.310 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:05:23.310 INFO  Model.MyModel - client ask to generate maze with size 500X500
+2021.06.07 23:05:34.539 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:05:34.540 INFO  Model.MyModel - client ask to generate maze with size 500X500
+2021.06.07 23:06:27.418 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 23:06:27.422 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 23:06:29.949 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:06:29.952 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.07 23:07:06.807 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.07 23:07:06.814 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.07 23:07:09.611 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.07 23:07:09.615 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 16:51:38.889 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 16:51:38.893 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 16:51:42.283 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:51:42.286 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 16:53:10.200 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 16:53:10.204 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 16:53:12.658 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:53:12.661 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 16:55:28.336 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 16:55:28.339 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 16:55:31.457 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:55:31.460 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 16:56:48.848 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 16:56:48.852 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 16:56:51.512 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:56:51.515 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 16:57:15.461 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:57:15.462 INFO  Model.MyModel - client ask to generate maze with size 2X10
+2021.06.08 16:57:18.536 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:57:18.536 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.08 16:59:17.936 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 16:59:17.941 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 16:59:21.754 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 16:59:21.757 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:02:09.443 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:02:09.447 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:02:12.219 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:02:12.221 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:03:51.275 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:03:51.279 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:03:55.623 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:03:55.626 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:05:02.551 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:05:02.554 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:05:05.089 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:05:05.094 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:07:24.457 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:07:24.460 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:07:27.301 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:07:27.304 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:07:55.658 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:07:55.661 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:07:57.892 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:07:57.894 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:11:48.178 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:11:48.181 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:11:51.331 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:11:51.335 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:12:47.766 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:12:47.770 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:12:50.270 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:12:50.273 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:13:42.350 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:13:42.354 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:14:05.287 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:14:05.291 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:15:30.888 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:15:30.891 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:15:33.091 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:15:33.094 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:25:07.083 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:25:07.086 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:25:09.456 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:25:09.459 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:26:22.672 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:26:22.676 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:26:25.121 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:26:25.124 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:27:20.938 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:27:20.941 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:27:23.710 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:27:23.712 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:28:57.036 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:28:57.040 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:28:59.603 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:28:59.607 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:29:21.119 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:29:21.122 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:29:23.639 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:29:23.642 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:30:19.710 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:30:19.713 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:30:22.253 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:30:22.256 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:30:55.553 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:30:55.556 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:30:58.434 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:30:58.437 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:32:00.727 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:32:00.730 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:32:02.888 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:32:02.890 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:33:44.058 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:33:44.061 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:33:46.301 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:33:46.305 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:36:12.825 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:36:12.830 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:36:20.869 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:36:20.869 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:57:33.383 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:57:33.386 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:57:41.969 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:57:41.974 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:58:49.770 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:58:49.774 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:58:52.848 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:58:52.853 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 17:59:45.415 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 17:59:45.418 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 17:59:48.172 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 17:59:48.175 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 18:00:36.651 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 18:00:36.655 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 18:00:39.205 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/127.0.0.1, Port = 5400
+2021.06.08 18:00:39.208 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 18:54:01.681 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 18:54:01.685 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 18:54:08.418 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.128, Port = 5400
+2021.06.08 18:54:08.423 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.08 19:01:55.809 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.08 19:01:55.814 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.08 19:01:58.568 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.128, Port = 5400
+2021.06.08 19:01:58.574 INFO  Model.MyModel - client ask to generate maze with size 10X10

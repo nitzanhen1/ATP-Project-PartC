@@ -188,25 +188,38 @@ public class MyModel extends Observable implements IModel{
             }
         }
 
-        if(maze.getCell(tempRow,tempCol)==0){
-            playerRow=tempRow;
-            playerCol=tempCol;
-        }
-        setChanged();
-        notifyObservers("player moved");
-        if(playerRow==goalRow && playerCol==goalCol) {
-            setChanged();
-            notifyObservers("goal reached");
-        }
+        checkCell(tempRow, tempCol);
     }
+
+    public void updatePlayerPositionMouse(int row, int col){
+        checkCell(row,col);
+    }
+
+    private void checkCell(int row, int col){
+        if(maze.getCell(row,col)==0){
+            playerRow=row;
+            playerCol=col;
+            setChanged();
+            notifyObservers("player moved");
+            if(playerRow==goalRow && playerCol==goalCol) {
+                setChanged();
+                notifyObservers("goal reached");
+            }
+        }
+
+
+    }
+
 
     public void exit(){
         stopServers();
     }
+
     private void stopServers(){
         generateMazeServer.stop();
         solveMazeServer.stop();
     }
+
 
     public void saveMaze(File file) {
         /**

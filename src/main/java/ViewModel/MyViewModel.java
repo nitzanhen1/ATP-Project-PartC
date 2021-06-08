@@ -76,6 +76,10 @@ public class MyViewModel extends Observable implements Observer {
         model.updatePlayerPosition(direction);
     }
 
+    public void movePlayerMouse(int row,int col){
+        model.updatePlayerPositionMouse(row,col);
+    }
+
     public void exit()
     {
         model.exit();
