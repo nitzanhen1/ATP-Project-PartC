@@ -6,7 +6,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
@@ -42,6 +41,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     public void setPosition(int row, int col){
+        /*set the player position and draw*/
         playerRow=row;
         playerCol=col;
         draw();
@@ -64,28 +64,23 @@ public class MazeDisplayer extends Canvas {
         return imageFileNameWall.get();
     }
 
-    public void setImageFileNameWall(String imageFileNameWall) {
-        this.imageFileNameWall.set(imageFileNameWall);
-    }
-
     public String getImageFileNamePlayer() {
         return imageFileNamePlayer.get();
     }
 
-    public void setImageFileNamePlayer(String imageFileNamePlayer) {this.imageFileNamePlayer.set(imageFileNamePlayer);}
+    public void setImageFileNamePlayer(String imageFileNamePlayer) {
+        this.imageFileNamePlayer.set(imageFileNamePlayer);
+    }
 
     public String getImageFileNameGoal() {
         return imageFileNameGoal.get();
     }
 
-    public void setImageFileNameGoal(String imageFileNameGoal) {
-        this.imageFileNameGoal.set(imageFileNameGoal);
-    }
 
     public void drawMaze(int[][] maze) {
-        if(maze==null) {
+        /*get a maze in form of int[][] and call draw if not null*/
+        if(maze==null)
             return;
-        }
         this.maze = maze;
         draw();
     }
@@ -101,6 +96,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     private void setCanvas(){
+        //compute the maze cell sizes by maze row and column sizes and his canvas height and width properties
         double canvasHeight = getHeight();
         double canvasWidth = getWidth();
         rows = maze.length;
@@ -113,13 +109,14 @@ public class MazeDisplayer extends Canvas {
     }
 
     private void drawMazeWalls(GraphicsContext graphicsContext, int rows, int cols, double cellHeight, double cellWidth) {
+        /*draw for every wall at the maze wallImage*/
         Image wallImage = null;
         try {
             wallImage = new Image(new FileInputStream(getImageFileNameWall()));
         } catch (FileNotFoundException e) {
             System.out.println("There is no wall image");
         }
-
+        //for every cell that is 1 in the matrix draw a wallImage
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 double x = j* cellWidth;
@@ -137,6 +134,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     private void drawPlayer(GraphicsContext graphicsContext, double cellHeight, double cellWidth) {
+        /*draw a playerImage by the sizes of the cell and the player location */
         Image playerImage = null;
         try {
             playerImage = new Image(new FileInputStream(getImageFileNamePlayer()));
@@ -154,6 +152,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     private void drawGoal(GraphicsContext graphicsContext, double cellHeight, double cellWidth) {
+        /*draw a goalImage by the sizes of the cell and the goal location */
         Image goalImage = null;
         try {
             goalImage = new Image(new FileInputStream(getImageFileNameGoal()));
@@ -161,7 +160,6 @@ public class MazeDisplayer extends Canvas {
             System.out.println("There is no goal image");
         }
         graphicsContext.setFill(Color.GREEN);
-
         double x = getGoalCol()*cellWidth;
         double y = getGoalRow()*cellHeight;
         if(goalImage==null)
@@ -171,6 +169,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     public void drawSolution(int[][] solution) {
+        /*clear the canvas and draw maze, player, goal and the solution as color from the player pos to goal pos(excluding them cell) */
         setCanvas();
         draw();
         graphicsContext.setFill(Color.TURQUOISE);
@@ -182,6 +181,7 @@ public class MazeDisplayer extends Canvas {
     }
 
     public void drawHint(int[] hint) {
+        /*clear the canvas and draw maze, player, goal and the the hint as color by its pos*/
         if(hint[0]==this.goalRow && hint[1]==this.goalCol)
             return;
         setCanvas();
