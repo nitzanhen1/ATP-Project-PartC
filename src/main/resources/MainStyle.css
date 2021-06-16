@@ -3,7 +3,7 @@
 }
 
 BorderPane{
-    -fx-background-image: url("//resources/images/open8.jpg");
+    -fx-background-image: url("//resources/images/openBackground.jpg");
     -fx-background-size: stretch;
 }
 
@@ -12,11 +12,11 @@ BorderPane{
 }
 
 #properties{
-    -fx-background-image: url("//resources/images/milk.jpeg");;
+    -fx-background-image: url("//resources/images/helpBackground.jpeg");;
 }
 
 #helpAnchorPane{
-    -fx-background-image: url("//resources/images/milk.jpeg");
+    -fx-background-image: url("//resources/images/helpBackground.jpeg");
     -fx-background-size: stretch;
 }
 
@@ -26,33 +26,33 @@ BorderPane{
 }
 
 ImageView{
-    -fx-image: url("//resources/images/f2.png");
+    -fx-image: url("//resources/images/friends.png");
 }
 
 #rachelImage{
-    -fx-image: url("//resources/images/charMenu/rachel1.gif");
+    -fx-image: url("//resources/images/charMenu/rachel.gif");
     -fx-background-color: green;
 }
 #monicaImage{
-    -fx-image: url("//resources/images/charMenu/monica3.gif");
+    -fx-image: url("//resources/images/charMenu/monica.gif");
     -fx-background-color: green;
 }
 
 #phoebeImage{
-    -fx-image: url("//resources/images/charMenu/p5.gif");
+    -fx-image: url("//resources/images/charMenu/phoebe.gif");
     -fx-background-color: green;
 }
 #chandlerImage{
-    -fx-image: url("//resources/images/charMenu/chandler2.gif");
+    -fx-image: url("//resources/images/charMenu/chandler.gif");
     -fx-background-color: green;
 }
 
 #joeyImage{
-    -fx-image: url("//resources/images/charMenu/j1.gif");
+    -fx-image: url("//resources/images/charMenu/joey.gif");
     -fx-background-color: green;
 }
 #rossImage{
-    -fx-image: url("//resources/images/charMenu/ross4.gif");
+    -fx-image: url("//resources/images/charMenu/ross.gif");
     -fx-background-color: green;
 }
 TextArea{

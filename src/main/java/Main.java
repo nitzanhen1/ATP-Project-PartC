@@ -20,7 +20,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
+        //creating a fxmlLoader for the main scene of the game
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/MainView.fxml"));
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Friends Maze");
@@ -30,22 +30,20 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        //creating MVVM objects and their relationships
         IModel model = new MyModel();
         MyViewModel myViewModel = new MyViewModel(model);
         MainViewController mainViewController =fxmlLoader.getController();
         mainViewController.setStage(primaryStage);
         mainViewController.setMyViewModel(myViewModel);
 
-
+        //making sure the game will be exited properly
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
                 mainViewController.exit();
             }
         });
-
     }
-
-
     public static void main(String[] args) {
         launch(args);
     }

@@ -450,3 +450,637 @@
 2021.06.08 19:01:55.814 INFO  Model.MyModel - Solver server started at port 5401, can except clients
 2021.06.08 19:01:58.568 INFO  Model.MyModel - client connected to server - IP = h-MacBook-Air-sl-Malka.local/192.168.1.128, Port = 5400
 2021.06.08 19:01:58.574 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 11:35:03.580 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 11:35:03.584 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:18:05.414 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:18:05.417 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:18:10.731 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:18:10.733 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:18:16.746 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:18:16.746 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:18:24.958 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:18:24.958 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:18:27.865 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:18:27.865 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:20:24.320 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:20:24.324 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:20:29.213 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:20:29.214 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:20:31.894 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:20:31.894 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:20:36.704 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:20:36.704 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:27:05.404 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:27:05.407 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:29:24.986 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:29:24.989 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:29:29.066 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:29:29.068 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:29:30.087 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:29:30.087 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:29:34.186 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:29:34.186 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:29:42.313 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:29:42.313 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:30:17.178 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:30:17.180 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:30:20.993 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:20.995 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:30:22.245 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:22.246 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:30:24.481 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:24.482 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:30:31.136 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:31.136 INFO  Model.MyModel - client ask to generate maze with size 5X5
+2021.06.16 12:30:33.753 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:33.753 INFO  Model.MyModel - client ask to generate maze with size 5X5
+2021.06.16 12:30:51.844 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:51.844 INFO  Model.MyModel - client ask to generate maze with size 5X5
+2021.06.16 12:30:56.086 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:56.087 INFO  Model.MyModel - client ask to generate maze with size 5X5
+2021.06.16 12:30:59.226 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:30:59.226 INFO  Model.MyModel - client ask to generate maze with size 5X5
+2021.06.16 12:31:37.925 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:31:37.929 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:31:42.302 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:42.305 INFO  Model.MyModel - client ask to generate maze with size 2X2
+2021.06.16 12:31:46.830 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:46.830 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:31:48.177 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:48.177 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:31:51.297 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:51.297 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:31:53.305 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:53.305 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:31:55.226 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:31:55.226 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:32:01.919 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:32:01.920 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:34:44.961 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:34:44.963 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:34:51.318 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:34:51.320 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:34:54.802 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:34:54.803 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:34:58.535 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:34:58.536 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:35:01.688 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:35:01.688 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:35:04.749 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:35:04.749 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:35:07.074 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:35:07.074 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 12:36:15.216 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:36:15.220 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:37:10.909 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:37:10.915 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:41:30.218 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:41:30.220 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:41:37.686 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:41:37.687 INFO  Model.MyModel - client ask to generate maze with size 1000X1000
+2021.06.16 12:42:21.810 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:42:21.812 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:42:26.982 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:42:26.985 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:48:23.848 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:48:23.851 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:48:26.831 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:48:26.834 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:49:50.169 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:49:50.173 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:49:54.045 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:49:54.048 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:50:14.620 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:50:14.620 INFO  Model.MyModel - client ask to generate maze with size 500X500
+2021.06.16 12:51:23.748 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:51:23.751 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:51:27.314 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:51:27.316 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:51:46.122 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:51:46.125 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:51:52.105 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:51:52.108 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.16 12:52:09.022 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:52:09.026 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:52:14.661 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:52:14.663 INFO  Model.MyModel - client ask to generate maze with size 500X500
+2021.06.16 12:52:50.971 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:52:50.972 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 12:54:32.035 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 12:54:32.038 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 12:54:38.077 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 12:54:38.080 INFO  Model.MyModel - client ask to generate maze with size 1000X1000
+2021.06.16 13:19:15.232 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:19:15.239 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:22:19.406 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:22:19.409 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:23:47.706 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:23:47.708 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:25:02.571 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:25:02.574 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:25:10.227 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:25:10.229 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:25:55.469 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:25:55.473 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:26:00.295 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:26:00.296 INFO  Model.MyModel - client ask to generate maze with size 100X100
+2021.06.16 13:26:01.530 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:26:01.531 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.DepthFirstSearch@4fe50cf0
+2021.06.16 13:26:01.581 INFO  Model.MyModel - solution found, length of solution is 210
+2021.06.16 13:26:17.456 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:26:17.456 INFO  Model.MyModel - client ask to generate maze with size 200X200
+2021.06.16 13:26:22.972 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:26:22.972 INFO  Model.MyModel - client ask to generate maze with size 1000X1000
+2021.06.16 13:40:46.829 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:40:46.833 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:40:52.035 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:40:52.038 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:40:55.541 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:40:55.541 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.DepthFirstSearch@500fc32
+2021.06.16 13:40:55.559 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:14.238 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:14.239 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@65f76545
+2021.06.16 13:41:14.254 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:16.429 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:16.429 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@4a3f7299
+2021.06.16 13:41:16.435 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:20.281 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:41:20.282 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:41:21.287 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:21.287 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@7eed4190
+2021.06.16 13:41:21.298 INFO  Model.MyModel - solution found, length of solution is 12
+2021.06.16 13:41:28.695 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:28.695 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@32ae16ea
+2021.06.16 13:41:28.704 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.16 13:41:33.132 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:33.132 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@53c9d182
+2021.06.16 13:41:33.141 INFO  Model.MyModel - solution found, length of solution is 15
+2021.06.16 13:41:35.639 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:35.639 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@7a992611
+2021.06.16 13:41:35.649 INFO  Model.MyModel - solution found, length of solution is 15
+2021.06.16 13:41:36.308 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.309 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@57a3953
+2021.06.16 13:41:36.318 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:36.342 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.342 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@155e6fd5
+2021.06.16 13:41:36.349 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:36.410 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.411 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@15f50542
+2021.06.16 13:41:36.431 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.16 13:41:36.473 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.473 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@219e15dc
+2021.06.16 13:41:36.481 INFO  Model.MyModel - solution found, length of solution is 14
+2021.06.16 13:41:36.551 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.552 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@2019edd1
+2021.06.16 13:41:36.562 INFO  Model.MyModel - solution found, length of solution is 13
+2021.06.16 13:41:36.659 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.659 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@2ed79dee
+2021.06.16 13:41:36.666 INFO  Model.MyModel - solution found, length of solution is 12
+2021.06.16 13:41:36.716 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.716 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@dff3b52
+2021.06.16 13:41:36.721 INFO  Model.MyModel - solution found, length of solution is 11
+2021.06.16 13:41:36.776 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.776 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@5336d451
+2021.06.16 13:41:36.799 INFO  Model.MyModel - solution found, length of solution is 10
+2021.06.16 13:41:36.839 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.839 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@4b993dbc
+2021.06.16 13:41:36.844 INFO  Model.MyModel - solution found, length of solution is 10
+2021.06.16 13:41:36.881 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.881 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@52d896c0
+2021.06.16 13:41:36.887 INFO  Model.MyModel - solution found, length of solution is 9
+2021.06.16 13:41:36.945 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:36.945 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@78d1789b
+2021.06.16 13:41:36.969 INFO  Model.MyModel - solution found, length of solution is 9
+2021.06.16 13:41:37.048 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.048 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@558d84ea
+2021.06.16 13:41:37.056 INFO  Model.MyModel - solution found, length of solution is 8
+2021.06.16 13:41:37.096 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.096 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@23650f0
+2021.06.16 13:41:37.104 INFO  Model.MyModel - solution found, length of solution is 7
+2021.06.16 13:41:37.119 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.119 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@3daf0f5b
+2021.06.16 13:41:37.125 INFO  Model.MyModel - solution found, length of solution is 6
+2021.06.16 13:41:37.172 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.172 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@eba5081
+2021.06.16 13:41:37.177 INFO  Model.MyModel - solution found, length of solution is 6
+2021.06.16 13:41:37.251 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.251 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@66651994
+2021.06.16 13:41:37.261 INFO  Model.MyModel - solution found, length of solution is 5
+2021.06.16 13:41:37.366 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.367 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@4aeaa825
+2021.06.16 13:41:37.375 INFO  Model.MyModel - solution found, length of solution is 4
+2021.06.16 13:41:37.398 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.399 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@7650ed79
+2021.06.16 13:41:37.404 INFO  Model.MyModel - solution found, length of solution is 3
+2021.06.16 13:41:37.474 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.475 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@3779ac99
+2021.06.16 13:41:37.487 INFO  Model.MyModel - solution found, length of solution is 3
+2021.06.16 13:41:37.526 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.527 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@33c4bf0e
+2021.06.16 13:41:37.533 INFO  Model.MyModel - solution found, length of solution is 2
+2021.06.16 13:41:37.553 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.553 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@87dcea5
+2021.06.16 13:41:37.557 INFO  Model.MyModel - solution found, length of solution is 2
+2021.06.16 13:41:37.838 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 13:41:37.838 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@cdb3ab2
+2021.06.16 13:41:37.842 INFO  Model.MyModel - solution found, length of solution is 1
+2021.06.16 13:41:40.248 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:41:40.249 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:42:46.016 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:42:46.016 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:42:50.398 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:42:50.398 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:42:52.199 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:42:52.199 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:02.491 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:02.492 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:03.624 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:03.624 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:10.410 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:10.411 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:15.784 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:15.784 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:16.615 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:16.616 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:17.977 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:17.977 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:50.943 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:50.943 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:58.097 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:58.097 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:43:59.861 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:43:59.861 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:44:01.003 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:44:01.003 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:44:02.270 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:44:02.270 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:52:16.348 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:52:16.353 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:52:29.272 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:52:29.274 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:52:31.805 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:52:31.805 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:52:37.088 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:52:37.089 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:52:43.268 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:52:43.268 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:52:58.143 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:52:58.147 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:53:00.664 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:00.666 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:53:05.518 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:05.519 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:53:17.151 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:17.151 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:53:18.291 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:18.292 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:53:18.366 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:18.367 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 13:53:37.758 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:53:37.762 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:53:47.230 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 13:53:47.237 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 13:53:53.047 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:53.049 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:53:54.798 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:53:54.799 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:54:03.009 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:54:03.009 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:54:04.199 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:54:04.199 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 13:54:04.288 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 13:54:04.288 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:06:08.461 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:06:08.464 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:06:12.276 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:06:12.277 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 14:07:18.309 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:07:18.311 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:07:22.826 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:07:22.828 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:07:33.680 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:07:33.681 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:07:47.913 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:07:47.914 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:33:17.458 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:33:17.462 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:33:28.339 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:33:28.342 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:33:41.284 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:33:41.285 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:34:37.470 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:34:37.475 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:34:42.229 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:34:42.230 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:05.505 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:35:05.514 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:35:09.549 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:09.552 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:11.254 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:11.254 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:12.529 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:12.530 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:13.608 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:13.609 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:14.789 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:14.790 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:15.676 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:15.676 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:19.759 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:19.759 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:35:20.847 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:35:20.847 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:37:36.049 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:37:36.052 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:37:39.937 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:37:39.938 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:37:47.920 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:37:47.920 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:37:53.976 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:37:53.976 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:38:00.362 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:38:00.363 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:38:12.563 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:38:12.564 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:38:18.814 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:38:18.814 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:38:53.215 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:38:53.218 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:38:57.332 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:38:57.333 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:39:04.519 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:39:04.520 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:39:28.013 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:39:28.017 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:39:38.932 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:39:38.936 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:39:44.669 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:39:44.670 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:39:49.610 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:39:49.611 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:39:58.945 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:39:58.945 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:40:05.326 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:40:05.327 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:41:14.910 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:41:14.914 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:41:21.709 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:41:21.711 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:41:24.086 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:41:24.087 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:41:26.973 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:41:26.973 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:43:34.389 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:43:34.392 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:43:38.864 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:43:38.866 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:44:39.541 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 14:44:39.546 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 14:44:43.556 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:44:43.557 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:44:46.330 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:44:46.330 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:44:49.157 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:44:49.158 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:44:51.493 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:44:51.493 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:44:56.763 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:44:56.763 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 14:45:06.002 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:45:06.002 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 14:45:12.380 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:45:12.380 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 14:45:26.377 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:26.377 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@6e03df77
+2021.06.16 14:45:26.398 INFO  Model.MyModel - solution found, length of solution is 1
+2021.06.16 14:45:28.590 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:45:28.591 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 14:45:34.103 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:34.103 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@32653705
+2021.06.16 14:45:34.114 INFO  Model.MyModel - solution found, length of solution is 11
+2021.06.16 14:45:35.716 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:35.716 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@a16b289
+2021.06.16 14:45:35.724 INFO  Model.MyModel - solution found, length of solution is 10
+2021.06.16 14:45:35.840 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:35.840 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@3fbc2a1b
+2021.06.16 14:45:35.849 INFO  Model.MyModel - solution found, length of solution is 9
+2021.06.16 14:45:36.019 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.020 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@1aebda55
+2021.06.16 14:45:36.028 INFO  Model.MyModel - solution found, length of solution is 9
+2021.06.16 14:45:36.098 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.098 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@75108083
+2021.06.16 14:45:36.112 INFO  Model.MyModel - solution found, length of solution is 8
+2021.06.16 14:45:36.205 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.206 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@61753fd3
+2021.06.16 14:45:36.213 INFO  Model.MyModel - solution found, length of solution is 7
+2021.06.16 14:45:36.335 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.335 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@310e261f
+2021.06.16 14:45:36.342 INFO  Model.MyModel - solution found, length of solution is 6
+2021.06.16 14:45:36.421 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.422 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@670eb892
+2021.06.16 14:45:36.439 INFO  Model.MyModel - solution found, length of solution is 5
+2021.06.16 14:45:36.514 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.514 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@7f53db73
+2021.06.16 14:45:36.521 INFO  Model.MyModel - solution found, length of solution is 4
+2021.06.16 14:45:36.654 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.654 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@27b889e9
+2021.06.16 14:45:36.661 INFO  Model.MyModel - solution found, length of solution is 3
+2021.06.16 14:45:36.843 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:36.843 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@564d1ca1
+2021.06.16 14:45:36.847 INFO  Model.MyModel - solution found, length of solution is 2
+2021.06.16 14:45:37.053 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:37.053 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@591a388c
+2021.06.16 14:45:37.058 INFO  Model.MyModel - solution found, length of solution is 2
+2021.06.16 14:45:37.184 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5401
+2021.06.16 14:45:37.184 INFO  Model.MyModel - client ask to solve maze with algorithm algorithms.search.BestFirstSearch@76b48190
+2021.06.16 14:45:37.193 INFO  Model.MyModel - solution found, length of solution is 1
+2021.06.16 14:45:38.723 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 14:45:38.723 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:12:29.362 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:12:29.365 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:12:32.771 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:12:32.773 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:12:54.569 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:12:54.571 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:12:57.253 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:12:57.255 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:13:06.421 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:13:06.423 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:13:58.254 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:13:58.257 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:14:01.434 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:01.435 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:14:05.664 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:05.664 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:14:38.874 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:14:38.877 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:14:41.798 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:41.800 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:14:46.672 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:46.672 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:14:49.952 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:49.953 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:14:55.532 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:14:55.532 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:00.413 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:00.414 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:06.110 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:06.110 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:11.284 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:11.284 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:28.400 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:15:28.405 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:15:33.673 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:33.675 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:42.693 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:42.693 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:48.690 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:48.690 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:15:52.906 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:15:52.906 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:19:54.210 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:19:54.214 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:19:56.947 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:19:56.949 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:20:02.152 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:20:02.153 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:03.911 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:22:03.914 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:22:07.402 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:07.404 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:12.800 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:12.800 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:24.264 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:22:24.267 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:22:26.754 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:26.755 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:31.824 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:31.825 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:37.839 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:37.839 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:42.841 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:42.842 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:22:49.582 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:22:49.582 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:02.677 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:02.677 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:06.424 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:06.424 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:19.498 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:23:19.503 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:23:25.741 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:25.742 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:31.653 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:31.654 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:37.191 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:37.191 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:44.012 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:44.013 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:23:45.574 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:23:45.575 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:24:07.676 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:24:07.680 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:24:10.171 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:24:10.179 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:24:15.982 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:24:15.983 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:24:28.526 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:24:28.526 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:26:22.003 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:26:22.008 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:26:25.987 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:25.989 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:26:28.115 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:28.115 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:26:31.604 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:31.605 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:26:37.264 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:37.265 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:26:39.624 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:39.624 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:26:48.742 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:26:48.742 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:27:14.448 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:27:14.453 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:27:19.105 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:27:19.106 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:27:21.880 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:27:21.881 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:28:32.341 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:28:32.344 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:28:44.197 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:28:44.200 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:28:47.858 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:28:47.861 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:31:47.253 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:31:47.259 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:31:51.742 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:31:51.743 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:31:54.045 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:31:54.045 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:31:58.587 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:31:58.587 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:32:10.891 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:32:10.891 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:32:13.407 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:32:13.408 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:32:20.363 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:32:20.363 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:33:19.618 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:33:19.622 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:35:22.939 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:35:22.942 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:35:26.833 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:35:26.835 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:35:31.545 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:35:31.546 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 15:45:23.408 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:45:23.411 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:45:38.874 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:45:38.879 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:45:43.879 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:45:43.881 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:50:18.047 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:50:18.053 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:50:24.803 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:50:24.806 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:50:58.963 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:50:58.966 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:51:04.694 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:51:04.696 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:53:13.561 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:53:13.567 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:53:20.158 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:53:20.160 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:53:44.511 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:53:44.514 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:53:51.046 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:53:51.048 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:54:31.268 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:54:31.272 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:54:35.877 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:54:35.878 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:54:46.924 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:54:46.925 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:55:02.299 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 15:55:02.300 INFO  Model.MyModel - client ask to generate maze with size 4X4
+2021.06.16 15:58:20.103 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:58:20.106 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 15:59:45.518 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 15:59:45.522 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:00:16.790 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 16:00:16.793 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:00:45.072 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 16:00:45.075 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:00:47.772 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 16:00:47.774 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 16:00:58.013 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 16:00:58.014 INFO  Model.MyModel - client ask to generate maze with size 10X10
+2021.06.16 16:01:58.103 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 16:01:58.106 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:02:19.640 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 16:02:19.644 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:03:25.717 INFO  Model.MyModel - Generate server started at port 5400, can except clients
+2021.06.16 16:03:25.723 INFO  Model.MyModel - Solver server started at port 5401, can except clients
+2021.06.16 16:03:28.685 INFO  Model.MyModel - client connected to server - IP = DESKTOP-P5G7B34/192.168.0.129, Port = 5400
+2021.06.16 16:03:28.687 INFO  Model.MyModel - client ask to generate maze with size 10X10

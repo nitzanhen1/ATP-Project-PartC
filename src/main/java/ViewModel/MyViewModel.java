@@ -14,16 +14,18 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class MyViewModel extends Observable implements Observer {
+    //View Model connects between View and Model layers. and verifies validity fof input and output
     private IModel model;
 
     public MyViewModel(IModel model) {
-
+        //constructor of VM, assigning the model to be observed by myViewModel
         this.model = model;
         this.model.assignObserver(this);
     }
 
     @Override
     public void update(Observable o, Object arg) {
+        //in case of changes in Model, we pass the changes to the View section
         if(o instanceof IModel)
         {
             setChanged();
@@ -58,6 +60,8 @@ public class MyViewModel extends Observable implements Observer {
     public void setHint() {model.setHint(); }
 
     public void movePlayer(KeyEvent keyEvent){
+        //receives a key event from myViewModel, check which key was pressed,
+        //translate it to a direction and pass it to Model
         MovementDirection direction;
 
         switch (keyEvent.getCode()){
@@ -76,8 +80,37 @@ public class MyViewModel extends Observable implements Observer {
         model.updatePlayerPosition(direction);
     }
 
-    public void movePlayerMouse(int row,int col){
-        model.updatePlayerPositionMouse(row,col);
+    public void movePlayerMouse(int newRow,int newCol,int oldRow, int oldCol){
+        //receives rows an columns from before and after drag, computes the diff between rows and cols,
+        //translate it to a direction and pass it to Model
+        MovementDirection direction;
+        int deltaRow= newRow-oldRow;
+        int deltaCol= newCol-oldCol;
+        if(deltaRow>0){
+            if(deltaCol<0)
+                direction = MovementDirection.DOWNLEFT;
+            else if(deltaCol==0)
+                direction = MovementDirection.DOWN;
+            else
+                direction = MovementDirection.DOWNRIGHT;
+        }
+        else if(deltaRow==0){
+            if(deltaCol<0)
+                direction = MovementDirection.LEFT;
+            else if(deltaCol>0)
+                direction = MovementDirection.RIGHT;
+            else
+                return;
+        }
+        else{
+            if(deltaCol<0)
+                direction = MovementDirection.UPLEFT;
+            else if(deltaCol==0)
+                direction = MovementDirection.UP;
+            else
+                direction = MovementDirection.UPRIGHT;
+        }
+        model.updatePlayerPosition(direction);
     }
 
     public void exit()

@@ -31,6 +31,7 @@ public class MyModel extends Observable implements IModel{
     private final Logger LOG= LogManager.getLogger();
 
     public MyModel() {
+        /*model create the generate and solve servers and start them*/
         generateMazeServer = new Server(5400,1000,new ServerStrategyGenerateMaze());
         solveMazeServer = new Server(5401,1000,new ServerStrategySolveSearchProblem());
         generateMazeServer.start();
@@ -42,6 +43,7 @@ public class MyModel extends Observable implements IModel{
     public int[][] getMaze() {return maze.getMaze(); }
 
     public int[][] getSolution() {
+        /*return the Solution of maze as array of int[]*/
         ArrayList<AState> sol = solution.getSolutionPath();
         int[][] solutionAsArray = new int[sol.size()][2];
         for (int i = 0; i < sol.size(); i++) {
@@ -52,6 +54,7 @@ public class MyModel extends Observable implements IModel{
     }
 
     public int[] getHint() {
+        /*return the next step at the solution(hint) as int[]*/
         int[] hint = new int[2];
         hint[0] = ((MazeState) this.hint).getRowIndex();
         hint[1] = ((MazeState) this.hint).getColumnIndex();
@@ -68,10 +71,12 @@ public class MyModel extends Observable implements IModel{
     public int getGoalCol() {return goalCol; }
 
     public void generateMaze(int row, int col){
+        /*check if the maze is in legal size*/
         if(row<2 || col<2) {
             LOG.error("maze sizes are invalid, min size of maze is 2x2");
             throw new IllegalArgumentException();
         }
+        /*create new client and ask for generate maze from the generate server*/
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5400, new IClientStrategy() {
                 public void clientStrategy(InputStream inFromServer, OutputStream outToServer) {
@@ -86,7 +91,7 @@ public class MyModel extends Observable implements IModel{
                         toServer.flush();
                         byte[] compressedMaze = (byte[])fromServer.readObject(); //read generated maze (compressed with MyCompressor) from server
                         InputStream is = new MyDecompressorInputStream(new ByteArrayInputStream(compressedMaze));
-                        byte[] decompressedMaze = new byte[row*col +12 /*CHANGESIZE ACCORDING TO YOU MAZE SIZE*/]; //allocating byte[] for the decompressedmaze -
+                        byte[] decompressedMaze = new byte[row*col +12]; //allocating byte[] for the decompressedmaze -
 
                         is.read(decompressedMaze); //Fill decompressedMaze with bytes
                         maze = new Maze(decompressedMaze);
@@ -108,17 +113,20 @@ public class MyModel extends Observable implements IModel{
         playerCol=maze.getStartPosition().getColumnIndex();
         goalRow=maze.getGoalPosition().getRowIndex();
         goalCol=maze.getGoalPosition().getColumnIndex();
+        /*notify the observer that maze has generated*/
         setChanged();
         notifyObservers("maze generated");
     }
 
     public void solveMaze() {
+        /*call for update solution that solve the maze and notify the observer that maze has been solved*/
         updateSolution();
         setChanged();
         notifyObservers("maze solved");
     }
 
     public void setHint(){
+        /*call for update solution that solve the maze and notify the observer that hint has generated*/
         updateSolution();
         hint=solution.getSolutionPath().get(1);
         setChanged();
@@ -126,6 +134,7 @@ public class MyModel extends Observable implements IModel{
     }
 
     private void updateSolution(){
+        /*create new client and ask for solving the maze from the solver server*/
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5401, new IClientStrategy() {
                 @Override
@@ -153,7 +162,7 @@ public class MyModel extends Observable implements IModel{
     }
 
     public void updatePlayerPosition(MovementDirection direction){
-
+        /*get a MovementDirection type and move the player accordingly if possible*/
         int tempRow=playerRow;
         int tempCol=playerCol;
         switch (direction)
@@ -187,21 +196,19 @@ public class MyModel extends Observable implements IModel{
                 }
             }
         }
-
+        /*calls the checkCell function with the new row and col */
         checkCell(tempRow, tempCol);
     }
 
-    public void updatePlayerPositionMouse(int row, int col){
-        checkCell(row,col);
-    }
-
     private void checkCell(int row, int col){
+        /*check if the cell is path, if is - notify the observer that player has moved */
         if(maze.getCell(row,col)==0){
             playerRow=row;
             playerCol=col;
             setChanged();
             notifyObservers("player moved");
             if(playerRow==goalRow && playerCol==goalCol) {
+                /*if the player is at the goal notify the observer that player reached the goal*/
                 setChanged();
                 notifyObservers("goal reached");
             }
@@ -212,6 +219,7 @@ public class MyModel extends Observable implements IModel{
 
 
     public void exit(){
+        /*as a part of properly exiting the program, we have to stop the servers*/
         stopServers();
     }
 
@@ -222,9 +230,7 @@ public class MyModel extends Observable implements IModel{
 
 
     public void saveMaze(File file) {
-        /**
-         * Saving the maze into the path the user choose.
-         */
+        /* Saving the maze into the path that the user chose*/
         try {
             ObjectOutputStream objectOutput = new ObjectOutputStream(new FileOutputStream(file));
             maze.setStartPosition(playerRow,playerCol);
@@ -240,9 +246,7 @@ public class MyModel extends Observable implements IModel{
     }
 
     public void loadMaze(File file) {
-        /**
-         * load maze from a path that the user choose
-         */
+        /* load maze from a path that the user chose*/
         try {
             ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(file));
             byte[] loadedMaze = (byte[]) objectIn.readObject();
@@ -252,6 +256,7 @@ public class MyModel extends Observable implements IModel{
             playerCol = maze.getStartPosition().getColumnIndex();
             goalRow = maze.getGoalPosition().getRowIndex();
             goalCol = maze.getGoalPosition().getColumnIndex();
+            /*notify the observer that maze has generated*/
             setChanged();
             notifyObservers("maze generated");
         } catch (FileNotFoundException e) {
