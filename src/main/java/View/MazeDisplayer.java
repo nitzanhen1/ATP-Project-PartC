@@ -24,6 +24,14 @@ public class MazeDisplayer extends Canvas {
     private double cellWidth;
     private GraphicsContext graphicsContext;
 
+    public void setImageFileNameWall(String imageFileNameWall) {
+        this.imageFileNameWall.set(imageFileNameWall);
+    }
+
+    public void setImageFileNameGoal(String imageFileNameGoal) {
+        this.imageFileNameGoal.set(imageFileNameGoal);
+    }
+
     public int getPlayerRow() {
         return playerRow;
     }

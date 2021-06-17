@@ -32,7 +32,7 @@ public class MyViewController extends AView implements Observer {
 
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
-    private boolean flagPlayer=false;
+    private boolean dragOnPlayer=false;
 
     public void setUpdatePlayerRow(int row) { this.updatePlayerRow.set("" + row); }
     public void setUpdatePlayerCol(int col) {
@@ -231,7 +231,8 @@ public class MyViewController extends AView implements Observer {
         winPlayer.setVolume(0.4);
         winPlayer.setStopTime(new Duration(3000));
 
-        showAlert(Alert.AlertType.INFORMATION,"winner!!!","Congratulations, you won!\nfriends have reached the couch!!");
+        Alert alert = showAlert(Alert.AlertType.INFORMATION,"winner!!!","Congratulations, you won!\nfriends have reached the couch!!");
+        alert.setOnCloseRequest(e->winPlayer.pause());
     }
 
     public void startDrag(MouseEvent e){
@@ -243,13 +244,13 @@ public class MyViewController extends AView implements Observer {
         int playerRow = (int)(mouseRow/mazeDisplayer.getCellHeight());
         int playerCol = (int)(mouseCol/mazeDisplayer.getCellWidth());
         if(mazeDisplayer.getPlayerRow()==playerRow&&mazeDisplayer.getPlayerCol()==playerCol)
-            flagPlayer=true;
+            dragOnPlayer=true;
     }
     public void dragCharacter(MouseEvent e){
         //if maze is not null, compute the movemenet of the mouse and determine of the drag shoud move the player to another cell
         if(maze==null)
             return;
-        if(!flagPlayer)
+        if(!dragOnPlayer)
             return;
         double mouseCol =  e.getX();
         double mouseRow = e.getY();
@@ -269,7 +270,7 @@ public class MyViewController extends AView implements Observer {
         //if the maze is not null, when dragging event stops we change the flag back to false for the next drag event
         if(maze==null)
             return;
-        flagPlayer=false;
+        dragOnPlayer=false;
     }
 
 

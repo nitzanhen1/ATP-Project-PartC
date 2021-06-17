@@ -116,8 +116,11 @@ public abstract class AView implements Initializable, IView{
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("maze", "*.maze"));
         File file= fileChooser.showOpenDialog(stage);
         /*create a new game and load the maze*/
-        newGame(actionEvent);
-        this.myViewModel.loadMaze(file);
+        if (file != null) {
+            newGame(actionEvent);
+            this.myViewModel.loadMaze(file);
+        }
+
     }
 
     public void properties(ActionEvent actionEvent) {
@@ -159,12 +162,13 @@ public abstract class AView implements Initializable, IView{
         musicState=!musicState;
     }
 
-    public void showAlert(Alert.AlertType type,String title, String message) {
+    public Alert showAlert(Alert.AlertType type,String title, String message) {
         /*show an alert with the properties type,title and message*/
         Alert alert = new Alert(type);
         alert.setTitle(title);
         alert.setContentText(message);
         alert.show();
+        return alert;
     }
 
     public void backToMain(ActionEvent actionEvent) {

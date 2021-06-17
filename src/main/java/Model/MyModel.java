@@ -128,9 +128,11 @@ public class MyModel extends Observable implements IModel{
     public void setHint(){
         /*call for update solution that solve the maze and notify the observer that hint has generated*/
         updateSolution();
-        hint=solution.getSolutionPath().get(1);
-        setChanged();
-        notifyObservers("hint generated");
+        if(solution.getSolutionPath().size()>1){
+            hint=solution.getSolutionPath().get(1);
+            setChanged();
+            notifyObservers("hint generated");
+        }
     }
 
     private void updateSolution(){
